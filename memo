@@ -6,3 +6,21 @@
 
 
 
+
+移動済
+bashrc
+bash_aliases
+
+
+bashでやること
+関数の作成
+is_installed
+is_debian
+is_net_alive
+is_root_user
+confirm
+
+
+課題
+.desktopファイルへは、リンクで十分か?
+
