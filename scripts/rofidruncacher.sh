@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 
+#this file is loaded right before rofi call, by i3 settings.
 
 #create menu for drun cache-----------------------------
 
