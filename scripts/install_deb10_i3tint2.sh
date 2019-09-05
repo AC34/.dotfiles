@@ -87,16 +87,36 @@ echo "installing sudo and adding $inst_user to sudo" | tee -a LOG_FILE
 echo "login as root:"
 su -c "apt install -y sudo && $USERMOD"
 
+#backports,contrib,non-free registeration
+printf "deb http://deb.debian.org/debian/ buster main contrib non-free
+deb-src http://deb.debian.org/debian/ buster main contrib non-free
+
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+
+# buster-updates, previously known as 'volatile'
+deb http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
+
+deb http://deb.debian.org/debian/ buster-backports main contrib non-free
+
+#virtualbox6.0
+deb http://download.virtualbox.org/virtualbox/debian bionic contrib
+" >> /etc/apt/sources.list
+
 #install apps
 echo "installing multiple apps for desktop enviroment" >> $LOG_FILE
 echo "this might take a while."
 
-apt install -y xorg lightdm xinit i3 vim-gtk lightdm lightdm-gtk-greeter-settings ntfs-3g sudo rofi compton compton-conf htop ufw xbacklight pulseaudio network-manager bash-completion feh dbus-x11 nm-tray tlp udiskie fonts-vlgothic psmisc universal-ctags libxrandr2 arandr ranger python3 python3-pip cmus git powerline fonts-powerline
+
+apt install -y xorg xinit lightdm dbus-x11
+
+echo "removing vim-tiny. vim-gtk will be installed instead." >> $LOG_FILE
+apt remove vim-tiny
+
+apt install -y i3 vim-gtk ntfs-3g sudo rofi compton compton-conf htop ufw xbacklight pulseaudio network-manager bash-completion feh nm-tray tlp udiskie fonts-vlgothic psmisc universal-ctags libxrandr2 arandr ranger python3 python3-pip cmus git powerline fonts-powerline
 
 echo "installation finished at $(date)" >> $LOG_FILE
-
-echo "enabling lightdm" >> $LOG_FILE
-dpkg-reconfigure lightdm
 
 #backlight setting
 echo "setting xbacklight. This setting may only work for displays with intel drivers." >> $LOG_FILE
@@ -121,7 +141,6 @@ printf "Section \"Device\"
 EndSection" >> $XBACKLIGHTCONF
 fi
 
-
 #japanese locale setting
 echo "Locale Setting" >> $LOG_FILE
 echo "Current Locale is:$LANG"  >> $LOG_FILE
@@ -143,7 +162,7 @@ echo "press n to avoid making changes."
 read -n1 -p "press y or n:" yn
 if [[ $yn = [yY] ]]; then
   echo "Enabling Japanese Input" >> $LOG_FILE
-  apt install ibus-mozc
+  apt install -y ibus-mozc
   echo "instaled ibus-mozc" >> $LOG_FILE 
 fi
 
@@ -158,7 +177,7 @@ if [[ $yn = [yY] ]]; then
 	setupcon
 fi
 
-#make swappiness
+#make swappiness to 1
 SYSCTL_CONF=/etc/sysctl.conf
 echo "Swappiness setting" >> $LOG_FILE
 if ! grep -q "vm.swappiness=1.*" "/etc/sysctl.conf"; then
@@ -212,7 +231,7 @@ LIGHTDM_CONF=/usr/share/lightdm/lightdm.conf.d/01_debian.conf
 if ! [ -f $LIGHTDM_CONF ]; then
 		echo "conf did not exist=$LIGHTDM_CONF" >> $LOG_FILE
 		echo "creating new one." >> $LOG_FILE
-  touch $LIGHTDM_CONF
+    touch $LIGHTDM_CONF
 fi
 #[Seat:*] setting
 #list users by setting false to greeter-hide-users
@@ -224,8 +243,8 @@ else
   if grep -Eixq ".*greeter-hide-users.*=.*false.*" $LIGHTDM_CONF; then
 		echo "greeter-hide-users is already false." >> $LOG_FILE
   else
-			#no preset user property set.
-			#writing brand new setting
+#no preset user property set.
+#writing brand new setting
      printf "[Seat:*]\ngreeter-session=lightdm-greeter\nhide-users=false\nsession-wrapper=/etc/X11/Xsession\n" > $LIGHTDM_CONF
   fi
 fi
