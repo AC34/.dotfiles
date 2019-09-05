@@ -89,10 +89,9 @@ su -c "apt install -y sudo && $USERMOD"
 
 #install apps
 echo "installing multiple apps for desktop enviroment" >> $LOG_FILE
-echo "if installation fails, sudo needs to be acive,reboot now and try again." >> $LOG_FILE
 echo "this might take a while."
 
-apt install -y xorg lightdm xinit i3 vim-gtk lightdm lightdm-gtk-greeter-settings ntfs-3g sudo rofi compton compton-conf htop ufw xbacklight pulseaudio network-manager bash-completion feh dbus-x11 nm-tray tlp udiskie fonts-vl-gothic psmisc universal-ctags libxrandr2 arandr ranger python3 python3-pip cmus git powerline fonts-powerline
+apt install -y xorg lightdm xinit i3 vim-gtk lightdm lightdm-gtk-greeter-settings ntfs-3g sudo rofi compton compton-conf htop ufw xbacklight pulseaudio network-manager bash-completion feh dbus-x11 nm-tray tlp udiskie fonts-vlgothic psmisc universal-ctags libxrandr2 arandr ranger python3 python3-pip cmus git powerline fonts-powerline
 
 echo "installation finished at $(date)" >> $LOG_FILE
 
@@ -242,11 +241,7 @@ echo "Ufw Setting" >> $LOG_FILE
 ufw default DENY
 ufw enable
 
-#display setting
-echo "Display Setgin" >> $LOG_FILE
-echo "Launching Monitor Setting"
-arandr
-
-echo "Reached the end of the installation." >> $LOG_FILE
+#end of the installation
+echo "Reached the end of the installation. rebooting." >> $LOG_FILE
 
 
