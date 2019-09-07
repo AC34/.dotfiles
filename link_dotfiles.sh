@@ -4,25 +4,49 @@
 #user check
 if [ whoami = "root" ]; then
   echo "logged in as root, please login as a user"
-else
-  #initialize directory path
-  $DOT_HOME="${HOME}/.dotfiles/dotfiles"
+	exit
 fi
 
-#prepare directory
-if [ -d ~/.dotfiles ]; then
-  mkdir ~/.dotfiles
+#initialize directory path
+DOT_HOME="${HOME}/.dotfiles"
+
+#make sure .dotfiles directory exists
+if [ ! -d $DOT_HOME ]; then
+  mkdir $DOT_HOME
 fi
 
-#clone git repo
+#prepare git if not installed
+#should always be installed though
+if [ $(command -v git) = "" ]; then
+		if [ $(command -v sudo) = ""]; then
+		 echo "sudo and git not installed.can't proceed."
+		 echo "abort"
+		 exit
+		else 
+				echo "sudo found but git not installed. installing git."
+				sudo apt install git
+		fi
+fi
+
+#clone git repo if not found
 cd $DOT_HOME
-git clone git@github.com:AC34/dotfiles.git
+if [ ! -d "${DOT_HOME}/.git" ]; then 
+  echo "git repo not found. cloning." 
+  git clone git@github.com:AC34/dotfiles.git $DOT_HOME
+fi
 
 
+#now start linking
 
+#create links list
+LINKS_TO=($(find $DOT_HOME/dotfiles/ -name ".*"))
 
-
-
+#link
+for TO in "${LINKS_TO[@]}" ; do
+  FROM=${TO/.dotfiles\/dotfiles\//}
+  echo "linking FROM=${FROM} TO=$TO"
+	ln -sf $TO $FROM
+done
 
 
 
