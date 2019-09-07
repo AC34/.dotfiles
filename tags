@@ -1,0 +1,73 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+<Leader>c	dotfiles/.vimrc	/^nmap <Leader>c :close<CR>$/;"	m
+<Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
+<Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
+<Leader>f	dotfiles/.vimrc	/^nnoremap <Leader>f :Goyo<CR>$/;"	m
+<Leader>u	dotfiles/.vimrc	/^nmap <Leader>u <C-u>$/;"	m
+<Space>	dotfiles/.vimrc	/^nnoremap <Space> <NOP>$/;"	m
+CountIndentSpacesMultiplierUnit	dotfiles/.vimrc	/^function! CountIndentSpacesMultiplierUnit()$/;"	f
+CountTotalLineNumbers	dotfiles/.vimrc	/^function! CountTotalLineNumbers()$/;"	f
+FileAsList	dotfiles/.vimrc	/^function! FileAsList()$/;"	f
+SearchAndHighLightJS	dotfiles/.vimrc	/^function! SearchAndHighLightJS()$/;"	f
+SearchAndHighlightConfigs	dotfiles/.vimrc	/^function! SearchAndHighlightConfigs()$/;"	f
+SearchAndHighlightPHP	dotfiles/.vimrc	/^function! SearchAndHighlightPHP()$/;"	f
+SearchAndHighlightText	dotfiles/.vimrc	/^function! SearchAndHighlightText()$/;"	f
+SearchAndHighlightXML	dotfiles/.vimrc	/^function! SearchAndHighlightXML()$/;"	f
+Tlist_Ctags_Cmd	dotfiles/.vimrc	/^let Tlist_Ctags_Cmd = "\/usr\/bin\/ctags"$/;"	v
+Tlist_Exit_OnlyWindow	dotfiles/.vimrc	/^let Tlist_Exit_OnlyWindow = 1$/;"	v
+Tlist_Show_One_File	dotfiles/.vimrc	/^let Tlist_Show_One_File = 1$/;"	v
+Tlist_Use_Right_Window	dotfiles/.vimrc	/^let Tlist_Use_Right_Window = 1$/;"	v
+bash	dotfiles/.vimrc	/^augroup bash$/;"	a
+configs	dotfiles/.vimrc	/^augroup configs$/;"	a
+css3	dotfiles/.vimrc	/^augroup css3$/;"	a
+desktop	dotfiles/.vimrc	/^augroup desktop$/;"	a
+fd	dotfiles/.vimrc	/^imap fd <Esc>$/;"	m
+g:airline#extensions#tabline#enabled	dotfiles/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline_left_alt_sep	dotfiles/.vimrc	/^let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '»'$/;"	v
+g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '▶'$/;"	v
+g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = ''$/;"	v
+g:airline_powerline_fonts	dotfiles/.vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_right_alt_sep	dotfiles/.vimrc	/^let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = '«'$/;"	v
+g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = '◀'$/;"	v
+g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = ''$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^		let g:airline_symbols = {}$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.branch = '⎇'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.branch = ''$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '¶'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '␊'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '␤'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = 'Þ'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = 'ρ'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = '∥'$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.readonly = ''$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	v
+g:airline_theme	dotfiles/.vimrc	/^let g:airline_theme='deus'$/;"	v
+g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
+g:scrollfix	dotfiles/.vimrc	/^ let g:scrollfix=50  " means middle line of screen "$/;"	v
+g:syntastic_always_populate_loc_list	dotfiles/.vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	dotfiles/.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	dotfiles/.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	dotfiles/.vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
+general	dotfiles/.vimrc	/^augroup general$/;"	a
+gitconfig	dotfiles/.vimrc	/^augroup gitconfig$/;"	a
+gitignore	dotfiles/.vimrc	/^augroup gitignore$/;"	a
+html5	dotfiles/.vimrc	/^augroup html5$/;"	a
+is_debian	scripts/rofidruncacher.sh	/^is_debian () {$/;"	f
+javascript	dotfiles/.vimrc	/^augroup javascript$/;"	a
+json	dotfiles/.vimrc	/^augroup json$/;"	a
+php	dotfiles/.vimrc	/^augroup php$/;"	a
+sourceslist	dotfiles/.vimrc	/^augroup sourceslist$/;"	a
+todos	dotfiles/.vimrc	/^augroup todos$/;"	a
+vimrc	dotfiles/.vimrc	/^augroup vimrc$/;"	a
+xhtml	dotfiles/.vimrc	/^augroup xhtml$/;"	a
+xml	dotfiles/.vimrc	/^augroup xml$/;"	a

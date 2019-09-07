@@ -38,15 +38,32 @@ fi
 
 #now start linking
 
-#create links list
-LINKS_TO=($(find $DOT_HOME/dotfiles/ -name ".*"))
+#create dotfiles links list
+LINKS_TO=($(find $DOT_HOME/dotfiles/ -type f -name "*"))
 
 #link
 for TO in "${LINKS_TO[@]}" ; do
   FROM=${TO/.dotfiles\/dotfiles\//}
+	#making sure directory exists
+	if [ ! -d $(dirname $FROM) ]; then
+    mkdir -p $(dirname $FROM)
+  fi
   echo "linking FROM=${FROM} TO=$TO"
-	ln -sf $TO $FROM
+	ln -sfn $TO $FROM
 done
 
 
+#create .config links list
+LINKS_TO=($(find $DOT_HOME/config/ -type f -name "*"))
+
+#link
+for TO in "${LINKS_TO[@]}" ; do
+  FROM=${TO/.dotfiles\/config/.config}
+	#making sure directory exists
+	if [ ! -d $(dirname $FROM) ]; then
+    mkdir -p $(dirname $FROM)
+  fi
+  echo "linking FROM=${FROM} TO=$TO"
+	ln -sfn $TO $FROM
+done
 
