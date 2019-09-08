@@ -24,6 +24,10 @@ fi
 
 MENU+="4 ranger.desktop\n"
 
+MENU+="5 c.desktop\n"
+
+MENU+="6 ci.desktop\n"
+
 #write to the cache file
 echo -e $MENU > ~/.cache/rofi3.druncache
 

@@ -19,7 +19,7 @@ let g:mapleader = "\<Space>"
 "open nerdtree by leader+e
 map <Leader>e :NERDTreeToggle<CR>
 
-"close with leader ke
+"close with leader + c
 nmap <Leader>c :close<CR>
 
 "scroll up and down with leader key
