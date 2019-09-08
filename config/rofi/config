@@ -12,7 +12,7 @@ rofi.color-normal: argb:10101010, argb:88eeeeff, argb:00252936, argb:009575cd, #
 rofi.color-active: argb:00232239, #232241, argb:00252936, argb:009575cd, #ffc000
 rofi.color-urgent: argb:00232239, #ff0000, argb:00252936, argb:00252936, #ff0000
 
-rofi.width: 200
+rofi.width: 100
 rofi.padding: 300
 rofi.line-margin: 10
 rofi.lines: 5
