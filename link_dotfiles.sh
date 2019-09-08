@@ -48,7 +48,6 @@ for TO in "${LINKS_TO[@]}" ; do
 	if [ ! -d $(dirname $FROM) ]; then
     mkdir -p $(dirname $FROM)
   fi
-  echo "linking FROM=${FROM} TO=$TO"
 	ln -sfn $TO $FROM
 done
 
@@ -63,7 +62,19 @@ for TO in "${LINKS_TO[@]}" ; do
 	if [ ! -d $(dirname $FROM) ]; then
     mkdir -p $(dirname $FROM)
   fi
-  echo "linking FROM=${FROM} TO=$TO"
+	ln -sfn $TO $FROM
+done
+
+#create .desktop links list
+LINKS_TO=($(find $DOT_HOME/local/ -type f -name "*.desktop"))
+
+#link
+for TO in "${LINKS_TO[@]}" ; do
+  FROM=${TO/.dotfiles\/local/.local}
+	#making sure directory exists
+	if [ ! -d $(dirname $FROM) ]; then
+    mkdir -p $(dirname $FROM)
+  fi
 	ln -sfn $TO $FROM
 done
 

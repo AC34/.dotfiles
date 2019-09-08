@@ -5,29 +5,73 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
+0	config/powerline-shell/config.json	/^    "time",$/;"	s	array:segments
+1	config/powerline-shell/config.json	/^    "virtual_env", $/;"	s	array:segments
+2	config/powerline-shell/config.json	/^    "username",$/;"	s	array:segments
+3	config/powerline-shell/config.json	/^    "hostname", $/;"	s	array:segments
+4	config/powerline-shell/config.json	/^    "ssh", $/;"	s	array:segments
+5	config/powerline-shell/config.json	/^    "cwd", $/;"	s	array:segments
+6	config/powerline-shell/config.json	/^    "git", $/;"	s	array:segments
+7	config/powerline-shell/config.json	/^    "hg", $/;"	s	array:segments
+8	config/powerline-shell/config.json	/^    "jobs",$/;"	s	array:segments
+9	config/powerline-shell/config.json	/^    "root"$/;"	s	array:segments
 <Leader>c	dotfiles/.vimrc	/^nmap <Leader>c :close<CR>$/;"	m
 <Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
 <Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
 <Leader>f	dotfiles/.vimrc	/^nnoremap <Leader>f :Goyo<CR>$/;"	m
 <Leader>u	dotfiles/.vimrc	/^nmap <Leader>u <C-u>$/;"	m
 <Space>	dotfiles/.vimrc	/^nnoremap <Space> <NOP>$/;"	m
+AWS_PROFILE_BG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_BG = 8$/;"	v	class:Color
+AWS_PROFILE_FG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_FG = 14$/;"	v	class:Color
+CMD_FAILED_BG	config/powerline-shell/theme/mytheme.py	/^    CMD_FAILED_BG = 168$/;"	v	class:Color
+CMD_FAILED_FG	config/powerline-shell/theme/mytheme.py	/^    CMD_FAILED_FG = 0$/;"	v	class:Color
+CMD_PASSED_BG	config/powerline-shell/theme/mytheme.py	/^    CMD_PASSED_BG = 115$/;"	v	class:Color
+CMD_PASSED_FG	config/powerline-shell/theme/mytheme.py	/^    CMD_PASSED_FG = 15$/;"	v	class:Color
+CWD_BG	config/powerline-shell/theme/mytheme.py	/^    CWD_BG = 235$/;"	v	class:Color
+CWD_FG	config/powerline-shell/theme/mytheme.py	/^    CWD_FG = 214$/;"	v	class:Color
+Color	config/powerline-shell/theme/mytheme.py	/^class Color(DefaultColor):$/;"	c
 CountIndentSpacesMultiplierUnit	dotfiles/.vimrc	/^function! CountIndentSpacesMultiplierUnit()$/;"	f
 CountTotalLineNumbers	dotfiles/.vimrc	/^function! CountTotalLineNumbers()$/;"	f
 FileAsList	dotfiles/.vimrc	/^function! FileAsList()$/;"	f
+HOME_SPECIAL_DISPLAY	config/powerline-shell/theme/mytheme.py	/^    HOME_SPECIAL_DISPLAY = False$/;"	v	class:Color
+HOSTNAME_BG	config/powerline-shell/theme/mytheme.py	/^    HOSTNAME_BG = 235 #navy$/;"	v	class:Color
+HOSTNAME_FG	config/powerline-shell/theme/mytheme.py	/^    HOSTNAME_FG = 214 #sandy brown$/;"	v	class:Color
+JOBS_BG	config/powerline-shell/theme/mytheme.py	/^    JOBS_BG = 8$/;"	v	class:Color
+JOBS_FG	config/powerline-shell/theme/mytheme.py	/^    JOBS_FG = 4$/;"	v	class:Color
+PATH_BG	config/powerline-shell/theme/mytheme.py	/^    PATH_BG = 235$/;"	v	class:Color
+PATH_FG	config/powerline-shell/theme/mytheme.py	/^    PATH_FG = 214$/;"	v	class:Color
+READONLY_BG	config/powerline-shell/theme/mytheme.py	/^    READONLY_BG = 1$/;"	v	class:Color
+READONLY_FG	config/powerline-shell/theme/mytheme.py	/^    READONLY_FG = 15$/;"	v	class:Color
+REPO_CLEAN_BG	config/powerline-shell/theme/mytheme.py	/^    REPO_CLEAN_BG = 2   # green$/;"	v	class:Color
+REPO_CLEAN_FG	config/powerline-shell/theme/mytheme.py	/^    REPO_CLEAN_FG = 0   # black$/;"	v	class:Color
+REPO_DIRTY_BG	config/powerline-shell/theme/mytheme.py	/^    REPO_DIRTY_BG = 1   # red$/;"	v	class:Color
+REPO_DIRTY_FG	config/powerline-shell/theme/mytheme.py	/^    REPO_DIRTY_FG = 15  # white$/;"	v	class:Color
+SEPARATOR_BG	config/powerline-shell/theme/mytheme.py	/^    SEPARATOR_BG = 235$/;"	v	class:Color
+SEPARATOR_FG	config/powerline-shell/theme/mytheme.py	/^    SEPARATOR_FG = 214$/;"	v	class:Color
+SVN_CHANGES_BG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_BG = REPO_DIRTY_BG$/;"	v	class:Color
+SVN_CHANGES_FG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_FG = REPO_DIRTY_FG$/;"	v	class:Color
 SearchAndHighLightJS	dotfiles/.vimrc	/^function! SearchAndHighLightJS()$/;"	f
 SearchAndHighlightConfigs	dotfiles/.vimrc	/^function! SearchAndHighlightConfigs()$/;"	f
 SearchAndHighlightPHP	dotfiles/.vimrc	/^function! SearchAndHighlightPHP()$/;"	f
 SearchAndHighlightText	dotfiles/.vimrc	/^function! SearchAndHighlightText()$/;"	f
 SearchAndHighlightXML	dotfiles/.vimrc	/^function! SearchAndHighlightXML()$/;"	f
+TIME_BG	config/powerline-shell/theme/mytheme.py	/^    TIME_BG = 7$/;"	v	class:Color
+TIME_FG	config/powerline-shell/theme/mytheme.py	/^    TIME_FG = 194$/;"	v	class:Color
 Tlist_Ctags_Cmd	dotfiles/.vimrc	/^let Tlist_Ctags_Cmd = "\/usr\/bin\/ctags"$/;"	v
 Tlist_Exit_OnlyWindow	dotfiles/.vimrc	/^let Tlist_Exit_OnlyWindow = 1$/;"	v
 Tlist_Show_One_File	dotfiles/.vimrc	/^let Tlist_Show_One_File = 1$/;"	v
 Tlist_Use_Right_Window	dotfiles/.vimrc	/^let Tlist_Use_Right_Window = 1$/;"	v
+USERNAME_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_BG = 235$/;"	v	class:Color
+USERNAME_FG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_FG = 214$/;"	v	class:Color
+USERNAME_ROOT_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_ROOT_BG = 0$/;"	v	class:Color
+VIRTUAL_ENV_BG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_BG = 2$/;"	v	class:Color
+VIRTUAL_ENV_FG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_FG = 0$/;"	v	class:Color
 bash	dotfiles/.vimrc	/^augroup bash$/;"	a
 configs	dotfiles/.vimrc	/^augroup configs$/;"	a
 css3	dotfiles/.vimrc	/^augroup css3$/;"	a
 desktop	dotfiles/.vimrc	/^augroup desktop$/;"	a
 fd	dotfiles/.vimrc	/^imap fd <Esc>$/;"	m
+format	config/powerline-shell/config.json	/^    "format":"%H:%M %S"$/;"	s	object:time
 g:airline#extensions#tabline#enabled	dotfiles/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline_left_alt_sep	dotfiles/.vimrc	/^let g:airline_left_alt_sep = ''$/;"	v
 g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '»'$/;"	v
@@ -66,7 +110,10 @@ is_debian	scripts/rofidruncacher.sh	/^is_debian () {$/;"	f
 javascript	dotfiles/.vimrc	/^augroup javascript$/;"	a
 json	dotfiles/.vimrc	/^augroup json$/;"	a
 php	dotfiles/.vimrc	/^augroup php$/;"	a
+segments	config/powerline-shell/config.json	/^  "segments": [$/;"	a
 sourceslist	dotfiles/.vimrc	/^augroup sourceslist$/;"	a
+theme	config/powerline-shell/config.json	/^  "theme":"~\/.config\/powerline-shell\/theme\/mytheme.py",$/;"	s
+time	config/powerline-shell/config.json	/^  "time":{$/;"	o
 todos	dotfiles/.vimrc	/^augroup todos$/;"	a
 vimrc	dotfiles/.vimrc	/^augroup vimrc$/;"	a
 xhtml	dotfiles/.vimrc	/^augroup xhtml$/;"	a
