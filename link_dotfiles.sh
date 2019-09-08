@@ -78,3 +78,6 @@ for TO in "${LINKS_TO[@]}" ; do
 	ln -sfn $TO $FROM
 done
 
+
+#clear font cache data
+fc-cache -vf /usr/share/fonts
