@@ -9,28 +9,18 @@
 #e.g. 0 vim.desktop\n
 #by manually setting this cache, menu can be controlled.
 
+MENU="4 v.desktop\n"
 
-MENU="0 v.desktop\n"
-MENU+="1 firefox-esr.desktop\n"
+MENU+="3 f.desktop\n"
 
-is_debian
-if [ $ret_val == "1" ]; then
-	 #debian	
-		MENU+="2 debian-xerm.desktop\n"
-else
-		#otherwise try generic
-		MENU+="3 xterm.desktop\n"
-fi
+MENU+="2 fp.desktop\n"
 
-MENU+="4 ranger.desktop\n"
+MENU+="1 c.desktop\n"
 
-MENU+="5 c.desktop\n"
-
-MENU+="6 ci.desktop\n"
+MENU+="0 ci.desktop\n"
 
 #write to the cache file
 echo -e $MENU > ~/.cache/rofi3.druncache
-
 
 #functions---------------------------------------------
 

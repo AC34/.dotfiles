@@ -23,5 +23,7 @@ alias r='ranger'
 alias f="firefox"
 alias fp="firefox -private-window"
 
-
+#chromium
+alias c="chromium"
+alias ci="chromium -incognito"
 
