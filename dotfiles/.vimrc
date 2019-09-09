@@ -4,6 +4,9 @@
 "vim --versionで機能の一覧を表示えきる
 "clipboardなどをチェックする
 
+"Pluginの管理
+".vimrcを開いて　:source % :PlugInstallで入れる
+":PlugInstallだけでうまくいかない場合は、PlugUpdateも追加で試す
 
 
 

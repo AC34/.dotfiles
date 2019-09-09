@@ -85,6 +85,8 @@ fc-cache -vf /usr/share/fonts
 #vim plug setup
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
  #force install curl first
+ echo 
+ eco "in order to have vim-plug installed. you'll need to have curl installed first."
  sudo apt install curl
  #then download vim-plug
  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
