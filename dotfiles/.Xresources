@@ -14,23 +14,18 @@ XTerm*VT100.Translations: #override \
 !clipboard functions
 XTerm*selectToClipboard: true
 
-
 XTerm*termName :xterm-256color
 XTerm*utf8 :1
 XTerm*locale :true
 
-
 !font
-!use truetype
-!XTerm*faceName: VL-Gothic-Regular
-!XTerm*faceDoublesizeName: 
-!XTerm*faceName: VL-Gothic-Regular for PowerlineSymbols:antialias=true
 XTerm*renderFont:true
-!XTerm*faceName: xft:VL-Gothic-Regular:minspace=false:pixelsize=28 for PowerlineSymbols:antialias=true:pixelsize=14
-XTerm*faceDoublesizeName: VL-Gothic-Regular
-XTerm*faceName: DejaVu Sans Mono for Powerline 
+XTerm*faceName:: M+ 1mn,mplus Nerd Font:style=regular
+!XTerm*faceDoublesizeName:M+ 1p,mplus Nerd Font:style=medium,Regular
+XTerm*faceDoublesizeName: M+ 1m Nerd Font Complete.ttf: M+ 1m,mplus Nerd Font:style=regular
+
 XTerm*letterSpace:0 
-XTerm*faceSize: 12
+XTerm*faceSize: 13
 XTerm*xftAntialias:true
 XTerm*xftHinting:true
 
