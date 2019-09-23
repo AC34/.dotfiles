@@ -15,7 +15,6 @@ let g:mapleader = "\<Space>"
 
 "open nerdtree by leader+e
 map <Leader>e :NERDTreeToggle<CR>
-
 "close Window with leader + c
 nmap <Leader>c :close<CR>
 
@@ -37,12 +36,17 @@ nnoremap <Leader>h :set hls<CR>
 "nmap Z za
 nnoremap <S-h> za
 nnoremap <S-l> za
+
+"toggle buffer list
+nnoremap <Leader>b BuffergatorToggle()
+"toggle taglist
+nnoremap <Leader>l :TlistToggle<CR>
+
 "#-----------------background parts---------------------
 "linux unnamedplus, windows unnamed
 set clipboard=unnamedplus
 
 "encoding for when writing files
-
 set fileencoding=utf-8
 
 "no swap file
@@ -93,8 +97,6 @@ set mouse=a
 "e.g. xset r rate 250 45 means 250 delay, 45 chars/sec"scroll lines by, for c-u,c-d
 set scroll=7
 
-"set cursor centered while scrolling
-
 "this can be active for mouse too
 set scrolloff=21
 
@@ -114,8 +116,9 @@ Plug 'vim-airline/vim-airline-themes'
 
 "NERDTree
 Plug 'scrooloose/nerdtree'
+"nerd tree git status highlight as it says
+Plug 'kleww/nerd-tree-git-status-highlight'
 
-"icons
 "needs to install compatible font(e.g. NerdFonts)
 Plug 'ryanoasis/vim-devicons'
 
@@ -129,7 +132,8 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'vim-airline/vim-airline-themes'
 
 "git
-Plug 'tpope/vim-fugitive' "taglist
+Plug 'tpope/vim-fugitive' 
+Plug 'airblade/vim-gitgutter' "sign column diff signgs
 
 "taglist
 Plug 'vim-scripts/taglist.vim'
@@ -142,22 +146,56 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 
-"syntax checker
-
-"syntax checkers are:
-
 "https://github.com/vim-syntastic/syntastic/blob/master/doc/syntastic-checkers.txt
 Plug 'scrooloose/syntastic'
 
-"snippet
+"neo snippet
 Plug 'shougo/neosnippet.vim'
+Plug 'shougo/neosnippet-snippets'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
-"icons
-"Plug ''
+"Vim Outliner
+Plug 'vimoutliner/vimoutliner'
 
+"cd into the proejct directory automatically(by git and etc)
+"using as a project manager
+Plug 'airblade/vim-rooter'
+
+"use tab to select completion list
+Plug 'ervandew/supertab'
+
+"thin vertical lines on each indents
+Plug 'yggdroot/indentline'
+
+"Language Specific plugins
+"php
+"php syntax
+Plug 'StanAngeloff/php.vim'
+"php-cs-fixer
+Plug 'stephpy/vim-php-cs-fixer'
+"syntax etc
+Plug 'spf13/piv'
+"php manual(Shift-k to see the manual)
+Plug 'alvan/vim-php-manual'
+
+"html
+"emmet
+Plug 'mattn/emmet-vim'
+
+"javascript
+
+"css3
 
 Plug 'ac34/vim-scaffold'
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -224,6 +262,9 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 "if there's only taglist window currently opening, then exit vim
 let Tlist_Exit_OnlyWindow = 1
+
+"for neo snippet
+let g:deoplete#enable_at_startup = 1
 
 "vim-scaffold settings
 let g:scaffold_mode = 1

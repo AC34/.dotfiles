@@ -25,7 +25,7 @@ XTerm*faceName:: M+ 1mn,mplus Nerd Font:style=regular
 XTerm*faceDoublesizeName: M+ 1m Nerd Font Complete.ttf: M+ 1m,mplus Nerd Font:style=regular
 
 XTerm*letterSpace:0 
-XTerm*faceSize: 13
+XTerm*faceSize: 14
 XTerm*xftAntialias:true
 XTerm*xftHinting:true
 
