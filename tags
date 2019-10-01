@@ -15,11 +15,19 @@
 7	config/powerline-shell/config.json	/^    "hg", $/;"	s	array:segments
 8	config/powerline-shell/config.json	/^    "jobs",$/;"	s	array:segments
 9	config/powerline-shell/config.json	/^    "root"$/;"	s	array:segments
+<A-h>	dotfiles/.vimrc	/^nnoremap <A-h> <C-W><C-h>$/;"	m
+<A-j>	dotfiles/.vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
+<A-k>	dotfiles/.vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
+<A-l>	dotfiles/.vimrc	/^nnoremap <A-l> <C-W><C-l>$/;"	m
+<Leader>b	dotfiles/.vimrc	/^nnoremap <Leader>b BuffergatorToggle()$/;"	m
 <Leader>c	dotfiles/.vimrc	/^nmap <Leader>c :close<CR>$/;"	m
 <Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
 <Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
-<Leader>f	dotfiles/.vimrc	/^nnoremap <Leader>f :Goyo<CR>$/;"	m
+<Leader>h	dotfiles/.vimrc	/^nnoremap <Leader>h :set hls<CR>$/;"	m
+<Leader>l	dotfiles/.vimrc	/^nnoremap <Leader>l :TlistToggle<CR>$/;"	m
 <Leader>u	dotfiles/.vimrc	/^nmap <Leader>u <C-u>$/;"	m
+<S-h>	dotfiles/.vimrc	/^nnoremap <S-h> za$/;"	m
+<S-l>	dotfiles/.vimrc	/^nnoremap <S-l> za$/;"	m
 <Space>	dotfiles/.vimrc	/^nnoremap <Space> <NOP>$/;"	m
 AWS_PROFILE_BG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_BG = 8$/;"	v	class:Color
 AWS_PROFILE_FG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_FG = 14$/;"	v	class:Color
@@ -30,9 +38,6 @@ CMD_PASSED_FG	config/powerline-shell/theme/mytheme.py	/^    CMD_PASSED_FG = 15$/
 CWD_BG	config/powerline-shell/theme/mytheme.py	/^    CWD_BG = 235$/;"	v	class:Color
 CWD_FG	config/powerline-shell/theme/mytheme.py	/^    CWD_FG = 214$/;"	v	class:Color
 Color	config/powerline-shell/theme/mytheme.py	/^class Color(DefaultColor):$/;"	c
-CountIndentSpacesMultiplierUnit	dotfiles/.vimrc	/^function! CountIndentSpacesMultiplierUnit()$/;"	f
-CountTotalLineNumbers	dotfiles/.vimrc	/^function! CountTotalLineNumbers()$/;"	f
-FileAsList	dotfiles/.vimrc	/^function! FileAsList()$/;"	f
 HOME_SPECIAL_DISPLAY	config/powerline-shell/theme/mytheme.py	/^    HOME_SPECIAL_DISPLAY = False$/;"	v	class:Color
 HOSTNAME_BG	config/powerline-shell/theme/mytheme.py	/^    HOSTNAME_BG = 235 #navy$/;"	v	class:Color
 HOSTNAME_FG	config/powerline-shell/theme/mytheme.py	/^    HOSTNAME_FG = 214 #sandy brown$/;"	v	class:Color
@@ -50,11 +55,6 @@ SEPARATOR_BG	config/powerline-shell/theme/mytheme.py	/^    SEPARATOR_BG = 235$/;
 SEPARATOR_FG	config/powerline-shell/theme/mytheme.py	/^    SEPARATOR_FG = 214$/;"	v	class:Color
 SVN_CHANGES_BG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_BG = REPO_DIRTY_BG$/;"	v	class:Color
 SVN_CHANGES_FG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_FG = REPO_DIRTY_FG$/;"	v	class:Color
-SearchAndHighLightJS	dotfiles/.vimrc	/^function! SearchAndHighLightJS()$/;"	f
-SearchAndHighlightConfigs	dotfiles/.vimrc	/^function! SearchAndHighlightConfigs()$/;"	f
-SearchAndHighlightPHP	dotfiles/.vimrc	/^function! SearchAndHighlightPHP()$/;"	f
-SearchAndHighlightText	dotfiles/.vimrc	/^function! SearchAndHighlightText()$/;"	f
-SearchAndHighlightXML	dotfiles/.vimrc	/^function! SearchAndHighlightXML()$/;"	f
 TIME_BG	config/powerline-shell/theme/mytheme.py	/^    TIME_BG = 7$/;"	v	class:Color
 TIME_FG	config/powerline-shell/theme/mytheme.py	/^    TIME_FG = 194$/;"	v	class:Color
 Tlist_Ctags_Cmd	dotfiles/.vimrc	/^let Tlist_Ctags_Cmd = "\/usr\/bin\/ctags"$/;"	v
@@ -66,10 +66,6 @@ USERNAME_FG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_FG = 214$/;"	
 USERNAME_ROOT_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_ROOT_BG = 0$/;"	v	class:Color
 VIRTUAL_ENV_BG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_BG = 2$/;"	v	class:Color
 VIRTUAL_ENV_FG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_FG = 0$/;"	v	class:Color
-bash	dotfiles/.vimrc	/^augroup bash$/;"	a
-configs	dotfiles/.vimrc	/^augroup configs$/;"	a
-css3	dotfiles/.vimrc	/^augroup css3$/;"	a
-desktop	dotfiles/.vimrc	/^augroup desktop$/;"	a
 fd	dotfiles/.vimrc	/^imap fd <Esc>$/;"	m
 format	config/powerline-shell/config.json	/^    "format":"%H:%M %S"$/;"	s	object:time
 g:airline#extensions#tabline#enabled	dotfiles/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
@@ -88,7 +84,7 @@ g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.branch = ''$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '¶'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '␊'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '␤'$/;"	v
-g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = ''$/;"	v
+g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.linenr = '' $/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = 'Þ'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = 'ρ'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = '∥'$/;"	v
@@ -97,24 +93,20 @@ g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	
 g:airline_theme	dotfiles/.vimrc	/^let g:airline_theme='deus'$/;"	v
 g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
-g:scrollfix	dotfiles/.vimrc	/^ let g:scrollfix=50  " means middle line of screen "$/;"	v
+g:scaffold_autofold_enable	dotfiles/.vimrc	/^let g:scaffold_autofold_enable = 1$/;"	v
+g:scaffold_autohi_enable	dotfiles/.vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
+g:scaffold_autoindent_enable	dotfiles/.vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
+g:scaffold_autoindent_maxcount	dotfiles/.vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
+g:scaffold_leaderhighlight_enable	dotfiles/.vimrc	/^let g:scaffold_leaderhighlight_enable = 1 $/;"	v
+g:scaffold_mode	dotfiles/.vimrc	/^let g:scaffold_mode = 1$/;"	v
+g:scaffold_overridejumps_enable	dotfiles/.vimrc	/^let g:scaffold_overridejumps_enable = 1$/;"	v
+g:scaffold_showcolumn_enable	dotfiles/.vimrc	/^let g:scaffold_showcolumn_enable = 1$/;"	v
 g:syntastic_always_populate_loc_list	dotfiles/.vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
 g:syntastic_auto_loc_list	dotfiles/.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_check_on_open	dotfiles/.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
 g:syntastic_check_on_wq	dotfiles/.vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
-general	dotfiles/.vimrc	/^augroup general$/;"	a
-gitconfig	dotfiles/.vimrc	/^augroup gitconfig$/;"	a
-gitignore	dotfiles/.vimrc	/^augroup gitignore$/;"	a
-html5	dotfiles/.vimrc	/^augroup html5$/;"	a
 is_debian	scripts/rofidruncacher.sh	/^is_debian () {$/;"	f
-javascript	dotfiles/.vimrc	/^augroup javascript$/;"	a
-json	dotfiles/.vimrc	/^augroup json$/;"	a
-php	dotfiles/.vimrc	/^augroup php$/;"	a
+searchHighlight	dotfiles/.vimrc	/^augroup searchHighlight$/;"	a
 segments	config/powerline-shell/config.json	/^  "segments": [$/;"	a
-sourceslist	dotfiles/.vimrc	/^augroup sourceslist$/;"	a
 theme	config/powerline-shell/config.json	/^  "theme":"~\/.config\/powerline-shell\/theme\/mytheme.py",$/;"	s
 time	config/powerline-shell/config.json	/^  "time":{$/;"	o
-todos	dotfiles/.vimrc	/^augroup todos$/;"	a
-vimrc	dotfiles/.vimrc	/^augroup vimrc$/;"	a
-xhtml	dotfiles/.vimrc	/^augroup xhtml$/;"	a
-xml	dotfiles/.vimrc	/^augroup xml$/;"	a

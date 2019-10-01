@@ -1,4 +1,4 @@
-"#!!!!!!!使い始める前に!!!!!!!!!!!!!!!!!
+"!!!!!!!使い始める前に!!!!!!!!!!!!!!!!!
 "vim ;-versionで機能の一覧を表示できる
 "clipboardなどをチェックする
 "Pluginの管理
@@ -39,8 +39,15 @@ nnoremap <S-l> za
 
 "toggle buffer list
 nnoremap <Leader>b BuffergatorToggle()
-"toggle taglist
-nnoremap <Leader>l :TlistToggle<CR>
+
+"tagbar
+nnoremap <Leader>l :TagbarToggle<CR>
+"toggle docker tool
+nnoremap <A-d> :DockerToolsToggle<CR>
+
+"jump between folds by tab
+nnoremap <Tab> zj
+nnoremap <S-tab> zk
 
 "#-----------------background parts---------------------
 "linux unnamedplus, windows unnamed
@@ -60,6 +67,8 @@ set history=500
 
 "filetype detection on 
 filetype on
+"filetype plugin on 
+filetype plugin on
 
 "allow highlights during typing
 set incsearch
@@ -100,6 +109,8 @@ set scroll=7
 "this can be active for mouse too
 set scrolloff=21
 
+set foldmethod=syntax
+
 "#-----------------plugin vim-plug-------------------------------"
 
 "write plugs between begin and end
@@ -117,12 +128,12 @@ Plug 'vim-airline/vim-airline-themes'
 "NERDTree
 Plug 'scrooloose/nerdtree'
 "nerd tree git status highlight as it says
-Plug 'kleww/nerd-tree-git-status-highlight'
+Plug 'scrooloose/nerdtree-git-plugin'
 
 "needs to install compatible font(e.g. NerdFonts)
 Plug 'ryanoasis/vim-devicons'
 
-"updat ctags automatically
+"update ctags automatically
 Plug 'ludovicchabant/vim-gutentags'
 
 "list buffers
@@ -135,8 +146,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive' 
 Plug 'airblade/vim-gitgutter' "sign column diff signgs
 
-"taglist
-Plug 'vim-scripts/taglist.vim'
+"tagbar
+Plug 'majutsushi/tagbar'
 
 ":neovim_rpc#serveraddr() to check if there is no error (1 is ok)
 "require python3 to run, and pip3 aliased to  python and pip
@@ -171,10 +182,29 @@ Plug 'airblade/vim-rooter'
 "use tab to select completion list
 Plug 'ervandew/supertab'
 
+"task runners
 "thin vertical lines on each indents
 Plug 'yggdroot/indentline'
 
+"test units runner
+"grunt
+"https://vimawesome.com/plugin/grunt-vim
+Plug 'mklabs/grunt.vim'
+"gulp :Gulp to run
+"https://vimawesome.com/plugin/gulp-vim
+Plug 'kabbamine/gulp-vim'
+
+"docker
+"https://vimawesome.com/plugin/vim-docker-tools
+Plug 'kevinhui/vim-docker-tools'
+"docker file
+Plug 'ekalinin/dockerfile.vim'
+
+"automatically insert matching bracket
+Plug 'raimondi/delimitmate'
+
 "Language Specific plugins
+Plug 'janko-m/vim-test'
 "php
 "php syntax
 Plug 'StanAngeloff/php.vim'
@@ -186,12 +216,15 @@ Plug 'spf13/piv'
 Plug 'alvan/vim-php-manual'
 
 "html
+"xml and html folding
+Plug 'vim-scripts/XML-Folding'
 "emmet
 Plug 'mattn/emmet-vim'
 
-"javascript
+"bash
+"bash folding
+Plug 'demophoon/bash-fold-expr'
 
-"css3
 
 Plug 'ac34/vim-scaffold'
 
@@ -201,12 +234,13 @@ call plug#end()
 
 "#-----------------plugin settings----------------------"set colorscheme
 
+"set setting colorcheme
 colorscheme falcon "air-line use powerline fonts
+
+"テーマの設定"vim-airline-theme"は別のプラグイン
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-"テーマの設定"vim-airline-theme"は別のプラグイン
 
 "ここで選ぶhttps://github.com/vim-airline/vim-airline/wiki/Screenshots
 "go the next line of current jump line
@@ -252,17 +286,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"taglist
-set tags=tags
-"give ctags path
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-"show only tags of current viewing file
-let Tlist_Show_One_File = 1
-"right window
-let Tlist_Use_Right_Window = 1
-"if there's only taglist window currently opening, then exit vim
-let Tlist_Exit_OnlyWindow = 1
-
 "for neo snippet
 let g:deoplete#enable_at_startup = 1
 
@@ -273,15 +296,14 @@ let g:scaffold_autoindent_enable = 1
 let g:scaffold_autoindent_maxcount = 500
 "auto highlight setting
 let g:scaffold_autohi_enable = 1
-let g:scaffold_leaderhighlight_enable = 1 
-"auto folding setting
-let g:scaffold_autofold_enable = 1
-let g:scaffold_overridejumps_enable = 1
-let g:scaffold_showcolumn_enable = 1
-
+let g:scaffold_leaderhighlight_enable = 1
+"auto foldcolumn setting
+let g:scaffold_autofoldcol_enable = 1
+"set foldcolumn=2
 "#-----------------augroup searchHighlight----------------
 augroup searchHighlight
-  au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE"
+  au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE" 
+				\|  execute "hi Folded ctermfg=179 ctermbg=Black"
 augroup END
 
 

@@ -18,6 +18,7 @@ alias ls='ls --color=never'
 alias vm='virtualbox'
 
 alias r='ranger'
+alias ll='ls -la'
 
 #firefox
 alias f="firefox"
