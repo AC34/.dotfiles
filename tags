@@ -15,6 +15,7 @@
 7	config/powerline-shell/config.json	/^    "hg", $/;"	s	array:segments
 8	config/powerline-shell/config.json	/^    "jobs",$/;"	s	array:segments
 9	config/powerline-shell/config.json	/^    "root"$/;"	s	array:segments
+<A-d>	dotfiles/.vimrc	/^nnoremap <A-d> :DockerToolsToggle<CR>$/;"	m
 <A-h>	dotfiles/.vimrc	/^nnoremap <A-h> <C-W><C-h>$/;"	m
 <A-j>	dotfiles/.vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
 <A-k>	dotfiles/.vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
@@ -24,11 +25,13 @@
 <Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
 <Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
 <Leader>h	dotfiles/.vimrc	/^nnoremap <Leader>h :set hls<CR>$/;"	m
-<Leader>l	dotfiles/.vimrc	/^nnoremap <Leader>l :TlistToggle<CR>$/;"	m
+<Leader>l	dotfiles/.vimrc	/^nnoremap <Leader>l :TagbarToggle<CR>$/;"	m
 <Leader>u	dotfiles/.vimrc	/^nmap <Leader>u <C-u>$/;"	m
 <S-h>	dotfiles/.vimrc	/^nnoremap <S-h> za$/;"	m
 <S-l>	dotfiles/.vimrc	/^nnoremap <S-l> za$/;"	m
+<S-tab>	dotfiles/.vimrc	/^nnoremap <S-tab> zk$/;"	m
 <Space>	dotfiles/.vimrc	/^nnoremap <Space> <NOP>$/;"	m
+<Tab>	dotfiles/.vimrc	/^nnoremap <Tab> zj$/;"	m
 AWS_PROFILE_BG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_BG = 8$/;"	v	class:Color
 AWS_PROFILE_FG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_FG = 14$/;"	v	class:Color
 CMD_FAILED_BG	config/powerline-shell/theme/mytheme.py	/^    CMD_FAILED_BG = 168$/;"	v	class:Color
@@ -57,10 +60,6 @@ SVN_CHANGES_BG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_BG = RE
 SVN_CHANGES_FG	config/powerline-shell/theme/mytheme.py	/^    SVN_CHANGES_FG = REPO_DIRTY_FG$/;"	v	class:Color
 TIME_BG	config/powerline-shell/theme/mytheme.py	/^    TIME_BG = 7$/;"	v	class:Color
 TIME_FG	config/powerline-shell/theme/mytheme.py	/^    TIME_FG = 194$/;"	v	class:Color
-Tlist_Ctags_Cmd	dotfiles/.vimrc	/^let Tlist_Ctags_Cmd = "\/usr\/bin\/ctags"$/;"	v
-Tlist_Exit_OnlyWindow	dotfiles/.vimrc	/^let Tlist_Exit_OnlyWindow = 1$/;"	v
-Tlist_Show_One_File	dotfiles/.vimrc	/^let Tlist_Show_One_File = 1$/;"	v
-Tlist_Use_Right_Window	dotfiles/.vimrc	/^let Tlist_Use_Right_Window = 1$/;"	v
 USERNAME_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_BG = 235$/;"	v	class:Color
 USERNAME_FG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_FG = 214$/;"	v	class:Color
 USERNAME_ROOT_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_ROOT_BG = 0$/;"	v	class:Color
@@ -93,14 +92,12 @@ g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	
 g:airline_theme	dotfiles/.vimrc	/^let g:airline_theme='deus'$/;"	v
 g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
-g:scaffold_autofold_enable	dotfiles/.vimrc	/^let g:scaffold_autofold_enable = 1$/;"	v
+g:scaffold_autofoldcol_enable	dotfiles/.vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
 g:scaffold_autohi_enable	dotfiles/.vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
 g:scaffold_autoindent_enable	dotfiles/.vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
 g:scaffold_autoindent_maxcount	dotfiles/.vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
-g:scaffold_leaderhighlight_enable	dotfiles/.vimrc	/^let g:scaffold_leaderhighlight_enable = 1 $/;"	v
+g:scaffold_leaderhighlight_enable	dotfiles/.vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
 g:scaffold_mode	dotfiles/.vimrc	/^let g:scaffold_mode = 1$/;"	v
-g:scaffold_overridejumps_enable	dotfiles/.vimrc	/^let g:scaffold_overridejumps_enable = 1$/;"	v
-g:scaffold_showcolumn_enable	dotfiles/.vimrc	/^let g:scaffold_showcolumn_enable = 1$/;"	v
 g:syntastic_always_populate_loc_list	dotfiles/.vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
 g:syntastic_auto_loc_list	dotfiles/.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_check_on_open	dotfiles/.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
