@@ -20,7 +20,7 @@
 <A-j>	dotfiles/.vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
 <A-k>	dotfiles/.vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
 <A-l>	dotfiles/.vimrc	/^nnoremap <A-l> <C-W><C-l>$/;"	m
-<Leader>b	dotfiles/.vimrc	/^nnoremap <Leader>b BuffergatorToggle()$/;"	m
+<Leader>b	dotfiles/.vimrc	/^nnoremap <Leader>b :BuffergatorToggle<CR>$/;"	m
 <Leader>c	dotfiles/.vimrc	/^nmap <Leader>c :close<CR>$/;"	m
 <Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
 <Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
@@ -67,6 +67,7 @@ VIRTUAL_ENV_BG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_BG = 2$
 VIRTUAL_ENV_FG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_FG = 0$/;"	v	class:Color
 fd	dotfiles/.vimrc	/^imap fd <Esc>$/;"	m
 format	config/powerline-shell/config.json	/^    "format":"%H:%M %S"$/;"	s	object:time
+g:NERDTreeWinSize	dotfiles/.vimrc	/^let g:NERDTreeWinSize=28$/;"	v
 g:airline#extensions#tabline#enabled	dotfiles/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline_left_alt_sep	dotfiles/.vimrc	/^let g:airline_left_alt_sep = ''$/;"	v
 g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '»'$/;"	v
@@ -90,6 +91,7 @@ g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = '∥'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.readonly = ''$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	v
 g:airline_theme	dotfiles/.vimrc	/^let g:airline_theme='deus'$/;"	v
+g:buffergator_split_size	dotfiles/.vimrc	/^let g:buffergator_split_size =28$/;"	v
 g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
 g:scaffold_autofoldcol_enable	dotfiles/.vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
@@ -102,6 +104,7 @@ g:syntastic_always_populate_loc_list	dotfiles/.vimrc	/^let g:syntastic_always_po
 g:syntastic_auto_loc_list	dotfiles/.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_check_on_open	dotfiles/.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
 g:syntastic_check_on_wq	dotfiles/.vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:tagbar_width	dotfiles/.vimrc	/^let g:tagbar_width = 28$/;"	v
 is_debian	scripts/rofidruncacher.sh	/^is_debian () {$/;"	f
 searchHighlight	dotfiles/.vimrc	/^augroup searchHighlight$/;"	a
 segments	config/powerline-shell/config.json	/^  "segments": [$/;"	a

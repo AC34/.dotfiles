@@ -38,7 +38,7 @@ nnoremap <S-h> za
 nnoremap <S-l> za
 
 "toggle buffer list
-nnoremap <Leader>b BuffergatorToggle()
+nnoremap <Leader>b :BuffergatorToggle<CR>
 
 "tagbar
 nnoremap <Leader>l :TagbarToggle<CR>
@@ -50,66 +50,23 @@ nnoremap <Tab> zj
 nnoremap <S-tab> zk
 
 "#-----------------background parts---------------------
-"linux unnamedplus, windows unnamed
-set clipboard=unnamedplus
-
-"encoding for when writing files
-set fileencoding=utf-8
-
-"no swap file
-set noswapfile
-
-"set undo times
-set undolevels=500
-
-"set history counts
-set history=500
-
 "filetype detection on 
 filetype on
 "filetype plugin on 
 filetype plugin on
 
-"allow highlights during typing
-set incsearch
-
 "#-----------------visible parts------------------------
-"show line numbers
-set number
-
-"enable256 colors when terminal supports
-set t_Co=256
-
-"visible parts of the editor
-set encoding=utf-8"wrap lines
-set wrap
-
-"autoindention always on
-set autoindent"allow plugin indent
+"allow plugin indent
 filetype plugin indent on
-
-"set 2 spaces for a tab
-set tabstop=2"shit width by spaces
-set shiftwidth=0 "with 0 follows tabstop
-set softtabstop=-1 "follows shiftwidth
-
-"tab by shiftwidth at the beginning of the line
-set smarttab "highlight on search
-set hlsearch
 
 "set font
 set guifont=Powerline\ 15"enable mouse
-set mouse=a
-
-"keyboard repeat rate can be set at .bashrc
 
 "e.g. xset r rate 250 45 means 250 delay, 45 chars/sec"scroll lines by, for c-u,c-d
 set scroll=7
 
 "this can be active for mouse too
 set scrolloff=21
-
-set foldmethod=syntax
 
 "#-----------------plugin vim-plug-------------------------------"
 
@@ -286,11 +243,22 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"tagbar width
+let g:tagbar_width = 28
+
+"nerdtree width
+let g:NERDTreeWinSize=28
+
+"buffergator width
+let g:buffergator_split_size =28
+
 "for neo snippet
 let g:deoplete#enable_at_startup = 1
 
+
 "vim-scaffold settings
 let g:scaffold_mode = 1
+
 "autoindent setting
 let g:scaffold_autoindent_enable = 1 
 let g:scaffold_autoindent_maxcount = 500
@@ -299,11 +267,9 @@ let g:scaffold_autohi_enable = 1
 let g:scaffold_leaderhighlight_enable = 1
 "auto foldcolumn setting
 let g:scaffold_autofoldcol_enable = 1
-"set foldcolumn=2
+
 "#-----------------augroup searchHighlight----------------
 augroup searchHighlight
   au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE" 
 				\|  execute "hi Folded ctermfg=179 ctermbg=Black"
 augroup END
-
-

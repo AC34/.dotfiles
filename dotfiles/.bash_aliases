@@ -28,3 +28,5 @@ alias fp="firefox -private-window"
 alias c="chromium"
 alias ci="chromium -incognito"
 
+#libre-office
+alias calc="libreoffice --calc"
