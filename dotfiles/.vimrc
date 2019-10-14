@@ -69,6 +69,15 @@ set scroll=7
 set scrolloff=21
 
 "#-----------------plugin vim-plug-------------------------------"
+"for windows
+if empty(glob(
+    \ '$HOME/' . (has('win32') ? 'vimfiles' : '.vim') . '/autoload/plug.vim'))
+  execute '!curl -fLo ' .
+    \ (has('win32') ? '\%USERPROFILE\%/vimfiles' : '$HOME/.vim') . 
+    \ '/autoload/plug.vim --create-dirs ' .
+    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  "autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 "write plugs between begin and end
 call plug#begin()
