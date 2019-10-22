@@ -23,17 +23,17 @@ fi
 
 #linking manually
 #vimrc
-ln -sfn $HOME/.vimrc $DOT_HOME/dotfiles/.vimrc
+ln -sfn $DOT_HOME/dotfiles/.vimrc $HOME/.vimrc
 
 
 #vim plug setup
-if [ ! -f ~/.vim/autoload/plug.vim ]; then
+if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
  #force install curl first
  echo 
  echo "in order to have vim-plug installed. you'll need to have curl installed first."
  sudo apt install curl
  #then download vim-plug
- curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+ curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 fi
 
