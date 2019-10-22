@@ -14,11 +14,16 @@ if [ ! -d $DOT_HOME ]; then
   mkdir $DOT_HOME
 fi
 
+#clone git repo if not found
+cd $DOT_HOME
+if [ ! -d "${DOT_HOME}/.git" ]; then 
+  echo "git repo not found. cloning." 
+  git clone git@github.com:AC34/dotfiles.git $DOT_HOME
+fi
 
 #linking manually
 #vimrc
-ln -sfn $DOT_HOME/dotfiles/.vimrc $HOME/.vimrc
-
+ln -sfn $HOME/.vimrc $DOT_HOME/dotfiles/.vimrc
 
 
 #vim plug setup
