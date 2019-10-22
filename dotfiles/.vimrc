@@ -299,4 +299,4 @@ let g:scaffold_autofoldcol_enable = 1
 augroup searchHighlight
   au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE" 
 				\|  execute "hi Folded ctermfg=179 ctermbg=Black"
-augroup END
+augroup END 
