@@ -3,6 +3,11 @@
 "clipboardなどをチェックする
 "Pluginの管理
 ".vimrcを開いて　:source % :PlugInstallで入れる":PlugInstallだけでうまくいかない場合は、PlugUpdateも追加で試す
+"間違ってwindowsで開いてしまった場合に終了
+if has("win32")
+	echom ".vimrc loaded on windows. use _vimrc."
+	finish
+endif
 
 "#-----------------keymap-------------------------------
 

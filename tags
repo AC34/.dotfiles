@@ -96,7 +96,7 @@ g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup 
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
 g:scaffold_autofoldcol_enable	dotfiles/.vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
 g:scaffold_autohi_enable	dotfiles/.vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
-g:scaffold_autoindent_enable	dotfiles/.vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
+g:scaffold_autoindent_enable	dotfiles/.vimrc	/^let g:scaffold_autoindent_enable = 1$/;"	v
 g:scaffold_autoindent_maxcount	dotfiles/.vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
 g:scaffold_leaderhighlight_enable	dotfiles/.vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
 g:scaffold_mode	dotfiles/.vimrc	/^let g:scaffold_mode = 1$/;"	v
