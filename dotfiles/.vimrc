@@ -125,9 +125,6 @@ Plug 'majutsushi/tagbar'
 
 Plug 'Shougo/deoplete.nvim'
 
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-
 "https://github.com/vim-syntastic/syntastic/blob/master/doc/syntastic-checkers.txt
 Plug 'scrooloose/syntastic'
 
@@ -141,6 +138,9 @@ else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
+endif
+if !has('nvim') " Vim 8 only
+ pythonx import pynvim
 endif
 
 "Vim Outliner

@@ -14,7 +14,14 @@ if [ ! -d $DOT_HOME ]; then
   mkdir $DOT_HOME
 fi
 
-#linking manually
+#bash alias update
+echo "alias python=python3" >> $ALIAS
+echo "alias pip=pip3" >> $ALIAS
+echo "alias v=vim" >> $ALIAS
+echo "alias ls='ls --color=never'" >> $ALIAS
+echo "alias r='ranger'" >> $ALIAS
+
+#vim
 #vimrc
 ln -sfn $DOT_HOME/dotfiles/.vimrc $HOME/.vimrc
 
@@ -22,11 +29,9 @@ ln -sfn $DOT_HOME/dotfiles/.vimrc $HOME/.vimrc
 ALIAS="${HOME}/.bash_aliases"
 #pytho is required for nvim derivatives
 sudo apt -y install python3 python3-pip
-echo "alias python=python3" >> $ALIAS
-echo "alias pip=pip3" >> $ALIAS
-echo "alias v=vim" >> $ALIAS
-echo "alias ls='ls --color=never'" >> $ALIAS
-echo "alias r='ranger'" >> $ALIAS
+pip install nvim 
+#ctags is required for gutentags
+sudo apt -y install universal-ctags
 
 #vim plug setup
 if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
