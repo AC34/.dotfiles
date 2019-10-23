@@ -5,7 +5,7 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
-$LANG	dotfiles/_vimrc	/^let $LANG='ja_JP.UTF-8'$/;"	v
+$LANG	windows/_vimrc	/^let $LANG='ja_JP.UTF-8'$/;"	v
 0	config/powerline-shell/config.json	/^    "time",$/;"	s	array:segments
 1	config/powerline-shell/config.json	/^    "virtual_env", $/;"	s	array:segments
 2	config/powerline-shell/config.json	/^    "username",$/;"	s	array:segments
@@ -17,39 +17,39 @@ $LANG	dotfiles/_vimrc	/^let $LANG='ja_JP.UTF-8'$/;"	v
 8	config/powerline-shell/config.json	/^    "jobs",$/;"	s	array:segments
 9	config/powerline-shell/config.json	/^    "root"$/;"	s	array:segments
 <A-d>	dotfiles/.vimrc	/^nnoremap <A-d> :DockerToolsToggle<CR>$/;"	m
-<A-d>	dotfiles/_vimrc	/^nnoremap <A-d> :DockerToolsToggle<CR>$/;"	m
+<A-d>	windows/_vimrc	/^nnoremap <A-d> :DockerToolsToggle<CR>$/;"	m
 <A-h>	dotfiles/.vimrc	/^nnoremap <A-h> <C-W><C-h>$/;"	m
-<A-h>	dotfiles/_vimrc	/^nnoremap <A-h> <C-W><C-h>$/;"	m
+<A-h>	windows/_vimrc	/^nnoremap <A-h> <C-W><C-h>$/;"	m
 <A-j>	dotfiles/.vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
-<A-j>	dotfiles/_vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
+<A-j>	windows/_vimrc	/^nnoremap <A-j> <C-W><C-j>$/;"	m
 <A-k>	dotfiles/.vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
-<A-k>	dotfiles/_vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
+<A-k>	windows/_vimrc	/^nnoremap <A-k> <C-W><C-k>$/;"	m
 <A-l>	dotfiles/.vimrc	/^nnoremap <A-l> <C-W><C-l>$/;"	m
-<A-l>	dotfiles/_vimrc	/^nnoremap <A-l> <C-W><C-l>$/;"	m
+<A-l>	windows/_vimrc	/^nnoremap <A-l> <C-W><C-l>$/;"	m
 <Leader>b	dotfiles/.vimrc	/^nnoremap <Leader>b :BuffergatorToggle<CR>$/;"	m
-<Leader>b	dotfiles/_vimrc	/^nnoremap <Leader>b :BuffergatorToggle<CR>$/;"	m
+<Leader>b	windows/_vimrc	/^nnoremap <Leader>b :BuffergatorToggle<CR>$/;"	m
 <Leader>c	dotfiles/.vimrc	/^nmap <Leader>c :close<CR>$/;"	m
-<Leader>c	dotfiles/_vimrc	/^nmap <Leader>c :close<CR>$/;"	m
+<Leader>c	windows/_vimrc	/^nmap <Leader>c :close<CR>$/;"	m
 <Leader>d	dotfiles/.vimrc	/^nmap <Leader>d <C-d>$/;"	m
-<Leader>d	dotfiles/_vimrc	/^nmap <Leader>d <C-d>$/;"	m
+<Leader>d	windows/_vimrc	/^nmap <Leader>d <C-d>$/;"	m
 <Leader>e	dotfiles/.vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
-<Leader>e	dotfiles/_vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
+<Leader>e	windows/_vimrc	/^map <Leader>e :NERDTreeToggle<CR>$/;"	m
 <Leader>h	dotfiles/.vimrc	/^nnoremap <Leader>h :set hls<CR>$/;"	m
-<Leader>h	dotfiles/_vimrc	/^nnoremap <Leader>h :set hls<CR>$/;"	m
+<Leader>h	windows/_vimrc	/^nnoremap <Leader>h :set hls<CR>$/;"	m
 <Leader>l	dotfiles/.vimrc	/^nnoremap <Leader>l :TagbarToggle<CR>$/;"	m
-<Leader>l	dotfiles/_vimrc	/^nnoremap <Leader>l :TagbarToggle<CR>$/;"	m
+<Leader>l	windows/_vimrc	/^nnoremap <Leader>l :TagbarToggle<CR>$/;"	m
 <Leader>u	dotfiles/.vimrc	/^nmap <Leader>u <C-u>$/;"	m
-<Leader>u	dotfiles/_vimrc	/^nmap <Leader>u <C-u>$/;"	m
+<Leader>u	windows/_vimrc	/^nmap <Leader>u <C-u>$/;"	m
 <S-h>	dotfiles/.vimrc	/^nnoremap <S-h> za$/;"	m
-<S-h>	dotfiles/_vimrc	/^nnoremap <S-h> za$/;"	m
+<S-h>	windows/_vimrc	/^nnoremap <S-h> za$/;"	m
 <S-l>	dotfiles/.vimrc	/^nnoremap <S-l> za$/;"	m
-<S-l>	dotfiles/_vimrc	/^nnoremap <S-l> za$/;"	m
+<S-l>	windows/_vimrc	/^nnoremap <S-l> za$/;"	m
 <S-tab>	dotfiles/.vimrc	/^nnoremap <S-tab> zk$/;"	m
-<S-tab>	dotfiles/_vimrc	/^nnoremap <S-tab> zk$/;"	m
+<S-tab>	windows/_vimrc	/^nnoremap <S-tab> zk$/;"	m
 <Space>	dotfiles/.vimrc	/^nnoremap <Space> <NOP>$/;"	m
-<Space>	dotfiles/_vimrc	/^nnoremap <Space> <NOP>$/;"	m
+<Space>	windows/_vimrc	/^nnoremap <Space> <NOP>$/;"	m
 <Tab>	dotfiles/.vimrc	/^nnoremap <Tab> zj$/;"	m
-<Tab>	dotfiles/_vimrc	/^nnoremap <Tab> zj$/;"	m
+<Tab>	windows/_vimrc	/^nnoremap <Tab> zj$/;"	m
 AWS_PROFILE_BG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_BG = 8$/;"	v	class:Color
 AWS_PROFILE_FG	config/powerline-shell/theme/mytheme.py	/^    AWS_PROFILE_FG = 14$/;"	v	class:Color
 CMD_FAILED_BG	config/powerline-shell/theme/mytheme.py	/^    CMD_FAILED_BG = 168$/;"	v	class:Color
@@ -84,30 +84,30 @@ USERNAME_ROOT_BG	config/powerline-shell/theme/mytheme.py	/^    USERNAME_ROOT_BG 
 VIRTUAL_ENV_BG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_BG = 2$/;"	v	class:Color
 VIRTUAL_ENV_FG	config/powerline-shell/theme/mytheme.py	/^    VIRTUAL_ENV_FG = 0$/;"	v	class:Color
 fd	dotfiles/.vimrc	/^imap fd <Esc>$/;"	m
-fd	dotfiles/_vimrc	/^imap fd <Esc>$/;"	m
+fd	windows/_vimrc	/^imap fd <Esc>$/;"	m
 format	config/powerline-shell/config.json	/^    "format":"%H:%M %S"$/;"	s	object:time
 g:NERDTreeWinSize	dotfiles/.vimrc	/^let g:NERDTreeWinSize=28$/;"	v
-g:NERDTreeWinSize	dotfiles/_vimrc	/^let g:NERDTreeWinSize=28$/;"	v
+g:NERDTreeWinSize	windows/_vimrc	/^let g:NERDTreeWinSize=28$/;"	v
 g:airline#extensions#tabline#enabled	dotfiles/.vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
-g:airline#extensions#tabline#enabled	dotfiles/_vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#enabled	windows/_vimrc	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline_left_alt_sep	dotfiles/.vimrc	/^let g:airline_left_alt_sep = ''$/;"	v
-g:airline_left_alt_sep	dotfiles/_vimrc	/^  let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_alt_sep	windows/_vimrc	/^  let g:airline_left_alt_sep = ''$/;"	v
 g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '»'$/;"	v
 g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = '▶'$/;"	v
 g:airline_left_sep	dotfiles/.vimrc	/^let g:airline_left_sep = ''$/;"	v
-g:airline_left_sep	dotfiles/_vimrc	/^  let g:airline_left_sep = '»'$/;"	v
-g:airline_left_sep	dotfiles/_vimrc	/^  let g:airline_left_sep = '▶'$/;"	v
-g:airline_left_sep	dotfiles/_vimrc	/^  let g:airline_left_sep = ''$/;"	v
+g:airline_left_sep	windows/_vimrc	/^  let g:airline_left_sep = '»'$/;"	v
+g:airline_left_sep	windows/_vimrc	/^  let g:airline_left_sep = '▶'$/;"	v
+g:airline_left_sep	windows/_vimrc	/^  let g:airline_left_sep = ''$/;"	v
 g:airline_powerline_fonts	dotfiles/.vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
-g:airline_powerline_fonts	dotfiles/_vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_powerline_fonts	windows/_vimrc	/^let g:airline_powerline_fonts = 1$/;"	v
 g:airline_right_alt_sep	dotfiles/.vimrc	/^let g:airline_right_alt_sep = ''$/;"	v
-g:airline_right_alt_sep	dotfiles/_vimrc	/^  let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_alt_sep	windows/_vimrc	/^  let g:airline_right_alt_sep = ''$/;"	v
 g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = '«'$/;"	v
 g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = '◀'$/;"	v
 g:airline_right_sep	dotfiles/.vimrc	/^let g:airline_right_sep = ''$/;"	v
-g:airline_right_sep	dotfiles/_vimrc	/^  let g:airline_right_sep = '«'$/;"	v
-g:airline_right_sep	dotfiles/_vimrc	/^  let g:airline_right_sep = '◀'$/;"	v
-g:airline_right_sep	dotfiles/_vimrc	/^  let g:airline_right_sep = ''$/;"	v
+g:airline_right_sep	windows/_vimrc	/^  let g:airline_right_sep = '«'$/;"	v
+g:airline_right_sep	windows/_vimrc	/^  let g:airline_right_sep = '◀'$/;"	v
+g:airline_right_sep	windows/_vimrc	/^  let g:airline_right_sep = ''$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^		let g:airline_symbols = {}$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.branch = '⎇'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.branch = ''$/;"	v
@@ -120,46 +120,46 @@ g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = 'ρ'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.paste = '∥'$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.readonly = ''$/;"	v
 g:airline_symbols	dotfiles/.vimrc	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^		let g:airline_symbols = {}$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.branch = '⎇'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.branch = ''$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.linenr = '¶'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.linenr = '␊'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.linenr = '␤'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.linenr = '' $/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.paste = 'Þ'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.paste = 'ρ'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.paste = '∥'$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.readonly = ''$/;"	v
-g:airline_symbols	dotfiles/_vimrc	/^  let g:airline_symbols.whitespace = 'Ξ'$/;"	v
+g:airline_symbols	windows/_vimrc	/^		let g:airline_symbols = {}$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.branch = '⎇'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.branch = ''$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.linenr = '¶'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.linenr = '␊'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.linenr = '␤'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.linenr = '' $/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.paste = 'Þ'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.paste = 'ρ'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.paste = '∥'$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.readonly = ''$/;"	v
+g:airline_symbols	windows/_vimrc	/^  let g:airline_symbols.whitespace = 'Ξ'$/;"	v
 g:airline_theme	dotfiles/.vimrc	/^let g:airline_theme='deus'$/;"	v
-g:airline_theme	dotfiles/_vimrc	/^let g:airline_theme='deus'$/;"	v
+g:airline_theme	windows/_vimrc	/^let g:airline_theme='deus'$/;"	v
 g:buffergator_split_size	dotfiles/.vimrc	/^let g:buffergator_split_size =28$/;"	v
-g:buffergator_split_size	dotfiles/_vimrc	/^let g:buffergator_split_size =28$/;"	v
+g:buffergator_split_size	windows/_vimrc	/^let g:buffergator_split_size =28$/;"	v
 g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
-g:deoplete#enable_at_startup	dotfiles/_vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
+g:deoplete#enable_at_startup	windows/_vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
-g:mapleader	dotfiles/_vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
-g:scaffold_autofoldcol_enable	dotfiles/_vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
-g:scaffold_autohi_enable	dotfiles/_vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
-g:scaffold_autoindent_enable	dotfiles/_vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
-g:scaffold_autoindent_maxcount	dotfiles/_vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
-g:scaffold_leaderhighlight_enable	dotfiles/_vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
+g:mapleader	windows/_vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
+g:scaffold_autofoldcol_enable	windows/_vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
+g:scaffold_autohi_enable	windows/_vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
+g:scaffold_autoindent_enable	windows/_vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
+g:scaffold_autoindent_maxcount	windows/_vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
+g:scaffold_leaderhighlight_enable	windows/_vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
 g:scaffold_mode	dotfiles/.vimrc	/^let g:scaffold_mode = 1$/;"	v
-g:scaffold_mode	dotfiles/_vimrc	/^let g:scaffold_mode = 1$/;"	v
+g:scaffold_mode	windows/_vimrc	/^let g:scaffold_mode = 1$/;"	v
 g:syntastic_always_populate_loc_list	dotfiles/.vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
-g:syntastic_always_populate_loc_list	dotfiles/_vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_always_populate_loc_list	windows/_vimrc	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
 g:syntastic_auto_loc_list	dotfiles/.vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
-g:syntastic_auto_loc_list	dotfiles/_vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	windows/_vimrc	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_check_on_open	dotfiles/.vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
-g:syntastic_check_on_open	dotfiles/_vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_open	windows/_vimrc	/^let g:syntastic_check_on_open = 1$/;"	v
 g:syntastic_check_on_wq	dotfiles/.vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
-g:syntastic_check_on_wq	dotfiles/_vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_check_on_wq	windows/_vimrc	/^let g:syntastic_check_on_wq = 0$/;"	v
 g:tagbar_width	dotfiles/.vimrc	/^let g:tagbar_width = 28$/;"	v
-g:tagbar_width	dotfiles/_vimrc	/^let g:tagbar_width = 28$/;"	v
+g:tagbar_width	windows/_vimrc	/^let g:tagbar_width = 28$/;"	v
 is_debian	scripts/rofidruncacher.sh	/^is_debian () {$/;"	f
 searchHighlight	dotfiles/.vimrc	/^augroup searchHighlight$/;"	a
-searchHighlight	dotfiles/_vimrc	/^augroup searchHighlight$/;"	a
+searchHighlight	windows/_vimrc	/^augroup searchHighlight$/;"	a
 segments	config/powerline-shell/config.json	/^  "segments": [$/;"	a
 theme	config/powerline-shell/config.json	/^  "theme":"~\/.config\/powerline-shell\/theme\/mytheme.py",$/;"	s
 time	config/powerline-shell/config.json	/^  "time":{$/;"	o

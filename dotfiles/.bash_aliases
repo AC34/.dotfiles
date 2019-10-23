@@ -1,6 +1,5 @@
 
 
-
 #in order to get this work, run "source .bashrc"
 
 
@@ -30,3 +29,7 @@ alias ci="chromium -incognito"
 
 #libre-office
 alias calc="libreoffice --calc"
+alias writer="libreoffice -writer" 
+
+
+
