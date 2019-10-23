@@ -14,17 +14,19 @@ if [ ! -d $DOT_HOME ]; then
   mkdir $DOT_HOME
 fi
 
-#clone git repo if not found
-cd $DOT_HOME
-if [ ! -d "${DOT_HOME}/.git" ]; then 
-  echo "git repo not found. cloning." 
-  git clone git@github.com:AC34/dotfiles.git $DOT_HOME
-fi
-
 #linking manually
 #vimrc
 ln -sfn $DOT_HOME/dotfiles/.vimrc $HOME/.vimrc
 
+#update bash_aliases
+ALIAS="${HOME}/.bash_aliases"
+#pytho is required for nvim derivatives
+sudo apt -y install python3 python3-pip
+echo "alias python=python3" >> $ALIAS
+echo "alias pip=pip3" >> $ALIAS
+echo "alias v=vim" >> $ALIAS
+echo "alias ls='ls --color=never'" >> $ALIAS
+echo "alias r='ranger'" >> $ALIAS
 
 #vim plug setup
 if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
