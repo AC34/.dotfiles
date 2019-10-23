@@ -140,15 +140,10 @@ g:deoplete#enable_at_startup	dotfiles/.vimrc	/^let g:deoplete#enable_at_startup 
 g:deoplete#enable_at_startup	dotfiles/_vimrc	/^let g:deoplete#enable_at_startup = 1$/;"	v
 g:mapleader	dotfiles/.vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
 g:mapleader	dotfiles/_vimrc	/^let g:mapleader = "\\<Space>"$/;"	v
-g:scaffold_autofoldcol_enable	dotfiles/.vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
 g:scaffold_autofoldcol_enable	dotfiles/_vimrc	/^let g:scaffold_autofoldcol_enable = 1$/;"	v
-g:scaffold_autohi_enable	dotfiles/.vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
 g:scaffold_autohi_enable	dotfiles/_vimrc	/^let g:scaffold_autohi_enable = 1$/;"	v
-g:scaffold_autoindent_enable	dotfiles/.vimrc	/^let g:scaffold_autoindent_enable = 1$/;"	v
 g:scaffold_autoindent_enable	dotfiles/_vimrc	/^let g:scaffold_autoindent_enable = 1 $/;"	v
-g:scaffold_autoindent_maxcount	dotfiles/.vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
 g:scaffold_autoindent_maxcount	dotfiles/_vimrc	/^let g:scaffold_autoindent_maxcount = 500$/;"	v
-g:scaffold_leaderhighlight_enable	dotfiles/.vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
 g:scaffold_leaderhighlight_enable	dotfiles/_vimrc	/^let g:scaffold_leaderhighlight_enable = 1$/;"	v
 g:scaffold_mode	dotfiles/.vimrc	/^let g:scaffold_mode = 1$/;"	v
 g:scaffold_mode	dotfiles/_vimrc	/^let g:scaffold_mode = 1$/;"	v

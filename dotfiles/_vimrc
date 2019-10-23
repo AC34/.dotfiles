@@ -1,8 +1,7 @@
-"!!!!!!!使い始める前に!!!!!!!!!!!!!!!!!
-"vim ;-versionで機能の一覧を表示できる
-"clipboardなどをチェックする
-"Pluginの管理
-".vimrcを開いて　:source % :PlugInstallで入れる":PlugInstallだけでうまくいかない場合は、PlugUpdateも追加で試す
+"windows用のvimrc
+"windowsのvimフォルダから、"
+"mklink _vimrc .dotfiles/dotfiles/_vimrc
+"を実行してリンクする
 if has("win32")
 let $LANG='ja_JP.UTF-8'
 set encoding=utf-8
@@ -282,7 +281,6 @@ let g:buffergator_split_size =28
 "for neo snippet
 let g:deoplete#enable_at_startup = 1
 
-
 "vim-scaffold settings
 let g:scaffold_mode = 1
 
@@ -300,3 +298,6 @@ augroup searchHighlight
   au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE" 
 				\|  execute "hi Folded ctermfg=179 ctermbg=Black"
 augroup END
+
+
+
