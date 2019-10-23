@@ -274,13 +274,13 @@ let g:deoplete#enable_at_startup = 1
 let g:scaffold_mode = 1
 
 "autoindent setting
-let g:scaffold_autoindent_enable = 1
-let g:scaffold_autoindent_maxcount = 500
+"let g:scaffold_autoindent_enable = 1
+"let g:scaffold_autoindent_maxcount = 500
 "auto highlight setting
-let g:scaffold_autohi_enable = 1
-let g:scaffold_leaderhighlight_enable = 1
+"let g:scaffold_autohi_enable = 1
+"let g:scaffold_leaderhighlight_enable = 1
 "auto foldcolumn setting
-let g:scaffold_autofoldcol_enable = 1
+"let g:scaffold_autofoldcol_enable = 1
 
 "#-----------------augroup searchHighlight----------------
 augroup searchHighlight
