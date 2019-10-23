@@ -1,6 +1,6 @@
 "windows用のvimrc
 "windowsのvimフォルダから、"
-"mklink _vimrc .dotfiles/dotfiles/_vimrc
+"mklink _vimrc .dotfiles/windows/_vimrc
 "を実行してリンクする
 if has("win32")
 let $LANG='ja_JP.UTF-8'
