@@ -44,3 +44,14 @@ if [ ! -f $HOME/.vim/autoload/plug.vim ]; then
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 fi
 
+#making xterm for vim move
+$BASHRC=$HOME/.bashrc
+echo "#vim moves on xterm">>$BASHRC
+echo "set editing-mode vi">>$BASHRC
+echo "set -o vi">>$BASHRC
+#maing key repeat speed faster
+echo "#faster key speed">>$BASHRC
+echo "xset r rate 200 60">>$BASHRC
+
+
+
