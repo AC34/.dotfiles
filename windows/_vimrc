@@ -16,7 +16,7 @@ nnoremap <Space> <NOP>
 let g:mapleader = "\<Space>"
 
 "open nerdtree by leader+e
-map <Leader>e :NERDTreeToggle<CR>
+map <Leader>e :Vexplore<CR>:vertical resize 27<CR>
 "close Window with leader + c
 nmap <Leader>c :close<CR>
 
@@ -62,7 +62,7 @@ filetype plugin on
 filetype plugin indent on
 
 "set font
-set guifont=Powerline\ 15"enable mouse
+"set guifont=Powerline\ 15"enable mouse
 
 "e.g. xset r rate 250 45 means 250 delay, 45 chars/sec"scroll lines by, for c-u,c-d
 set scroll=7
