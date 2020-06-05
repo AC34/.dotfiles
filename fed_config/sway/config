@@ -1,0 +1,181 @@
+
+#use winfows key
+set $mod Mod4
+
+## kill focused window
+bindsym $mod+Shift+q kill
+
+#change focus by vim move
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+#arrow keys to move focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+#move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+#bindsym $mod+h split h
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+#enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+#change conotainer layout
+#not implementing in order to have fixed container orientation
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
+
+#toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 " 1"
+set $ws2 " 2"
+set $ws3 " 3"
+set $ws4 " 4"
+set $ws5 " 5"
+set $ws6 " 6"
+set $ws7 " 7"
+set $ws8 " 8"
+set $ws9 " 9"
+set $ws10 " 10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload sway inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r reload
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+ 
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+ 
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
+
+#gaps
+gaps outer  10
+gaps inner 7
+
+#Window
+#no border for window
+for_window [class="^.*"] border pixel 1
+
+#Colors
+#colour of |border, |background, |text, |indicator |child_border
+client.focused #000000  #030009  #0E0A14 #0E0A14
+
+#Border
+default_border none 
+hide_edge_borders both 
+
+#screen brightness for first display found to be conected
+#brigher
+bindsym XF86MonBrightnessUp exec "bash ~/.dotfiles/scripts/backlight_up.sh"
+#darker
+bindsym XF86MonBrightnessDown exec "bash ~/.dotfiles/scripts/backlight_down.sh"
+
+#pulseaudio volume control (pavucontrol)
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease 
+
+#default terminal
+#replace this line when needed
+bindsym $mod+Return exec --no-startup-id rxvt
+
+#Wofi
+bindsym $mod+d exec --no-startup-id "wofi --show drun &" 
+
+#launch udiskie for auto mounting devices
+#exec --no-startup-id "udiskie &"
+
+#launch waybar
+exec --no-startup-id "waybar &"
+
+#set wallpaper by waybg
+exec swaybg -m stretch -i ~/.wallpaper.png
+
+#load Xresources
+exec --no-startup-id 'xrdb merge $HOME/.Xresources'
+#load .xinitrc
+exec --no-startup-id ""
+
+#launch rxvt daemon
+exec --no-startup-id 'urxvtd &'
+
+#exit
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you wan to exit sway?' -b 'exit sway' 'swaymsg exit'
+
+#background color
+#exec --no-startup-id "swaybg -c '#1e1338'"
+
+#keyboard
+input * xkb_layout 'jp(OADG109A)'
+
+#mako notification
+exec mako
+
+
+#ibus daemon
+exec --no-startup-id "ibus-daemon -drx"
+
+

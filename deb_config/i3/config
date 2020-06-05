@@ -188,3 +188,7 @@ exec --no-startup-id "xterm -e vim ~/memo/todo"
 #set wallpaper by restoring nitrogen
 exec --no-startup-id "nitrogen --restore"
 
+
+
+
+

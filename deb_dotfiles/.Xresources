@@ -20,7 +20,7 @@ XTerm*locale :true
 
 !font
 XTerm*renderFont:true
-XTerm*faceName:: M+ 1mn,mplus Nerd Font:style=regular
+XTerm*faceName::mplus Nerd Font:style=regular
 !XTerm*faceDoublesizeName:M+ 1p,mplus Nerd Font:style=medium,Regular
 XTerm*faceDoublesizeName: M+ 1m Nerd Font Complete.ttf: M+ 1m,mplus Nerd Font:style=regular
 
