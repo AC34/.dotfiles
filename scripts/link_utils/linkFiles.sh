@@ -23,7 +23,7 @@ function linkFiles(){
 	fi
 
   #listing files in dir
-  FILES=($(find "$FILES_DIR" -type f -name "*" -maxdepth 1 -mindepth 1))
+  FILES=($(find "$FILES_DIR" -maxdepth 1 -mindepth 1 -type f -name "*"))
 
   #create link names and link
   for FILE in "${FILES[@]}" ; do
