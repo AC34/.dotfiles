@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Terminal=false
+Exec=google-chrome
+Name=gc
+categories=Application
+Comment=for when wayland support 

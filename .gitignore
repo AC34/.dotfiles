@@ -1,10 +1,21 @@
 
+#ignore all configs first
+#config/*
+
 #ignore1
 *.git
 
 #ignoring
 memo
+#ignore nvim plugs
+config/nvim/plugged/
 
-#ignore vim plugins
-config/nvim/plugged/*
 
+#allow config files
+!config/i3/*
+!config/nitrogen/*
+!config/nvim/*
+!config/ranger/*
+!config/rofi/*
+!config/sway/*
+!config/waybar/*
