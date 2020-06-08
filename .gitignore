@@ -8,7 +8,7 @@
 #ignoring
 memo
 #ignore nvim plugs
-config/nvim/plugged/
+config/nvim/plugged/**
 
 
 #allow config files
