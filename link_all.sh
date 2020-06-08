@@ -31,10 +31,10 @@ MODE=$(detectSessionType)
 #----------------------------------------------------
 
 #linking common files(dotfiles)
-linkFiles "$DOT_HOME/dotfiles" ".dotfiles/dotfiles/" "" "1"
+linkFiles "$DOT_HOME/dotfiles" ".dotfiles/dotfiles/" "" "0"
 echo
 #common .config files
-linkDirs $DOT_HOME/config .dotfiles/config .config "1"
+linkDirs $DOT_HOME/config .dotfiles/config .config "0"
 echo
 
 #----------------------------------------------------
@@ -50,10 +50,10 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "x11" ]; then
 	#common .desktop files
-  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "1"
+  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
-  linkFiles "$DOT_HOME/local_alters/x11/share/applications" ".dotfiles/local_alters/x11" ".local" "1"
+  linkFiles "$DOT_HOME/local_alters/x11/share/applications" ".dotfiles/local_alters/x11" ".local" "0"
 	echo
 
   #end the script
@@ -65,10 +65,10 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "wayland" ]; then
   #common .desktop files
-  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "1"
+  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
-  linkFiles "$DOT_HOME/local_alters/wayland/share/applications" ".dotfiles/local_alters/wayland" ".local" "1"
+  linkFiles "$DOT_HOME/local_alters/wayland/share/applications" ".dotfiles/local_alters/wayland" ".local" "0"
 	echo
   #end the script
   echo linking files for wayland done
