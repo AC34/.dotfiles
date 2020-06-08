@@ -1,0 +1,6 @@
+
+
+
+#load bashrc
+source ~/.bashrc
+

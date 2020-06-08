@@ -1,8 +1,0 @@
-[user]
-	name = ac1deb
-	email = grepoac34devahead@yahoo.co.jp
-[color]
-	ui = true
-[core]
-	editor = vim
-  excludesfile = ~/.config/git/.gitignore_global

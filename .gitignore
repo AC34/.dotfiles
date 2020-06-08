@@ -5,4 +5,6 @@
 #ignoring
 memo
 
+#ignore vim plugins
+config/nvim/plugged/*
 

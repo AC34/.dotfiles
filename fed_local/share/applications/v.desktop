@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Terminal=true
-Exec=nvim
-Name=v
-categories=Application

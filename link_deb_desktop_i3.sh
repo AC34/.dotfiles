@@ -1,20 +1,6 @@
 #!/usr/bin/env bash
 
 
-#user check
-if [ whoami = "root" ]; then
-  echo "logged in as root, please login as a user"
-	exit
-fi
-
-#initialize directory path
-DOT_HOME="${HOME}/.dotfiles"
-
-#make sure .dotfiles directory exists
-if [ ! -d $DOT_HOME ]; then
-  mkdir $DOT_HOME
-fi
-
 #now start linking
 
 #create dotfiles links list

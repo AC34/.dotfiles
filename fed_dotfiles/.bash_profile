@@ -1,3 +1,0 @@
-
-
-bash $HOME/.startup.sh
