@@ -72,5 +72,18 @@ if [ "$MODE" = "wayland" ]; then
   echo linking files for wayland done
 fi
 
+#intall vim-plug 
+#this function contains dialog
+prepareVimPlug
 
-echo reached the end of the file
+#install mplus nerdfont
+echo install MPlus Nerdfont?
+read -p "(y/n)" yn
+if [[ $yn = [yY] ]]; then
+	echo installing vimplug
+  prepareVimPlug
+else
+	echo skipping nerdfont installation
+fi
+
+echo All dotfiles settings are done

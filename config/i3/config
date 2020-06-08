@@ -156,39 +156,16 @@ bindsym XF86MonBrightnessDown exec "bash ~/.dotfiles/scripts/backlight_down.sh"
 #pulseaudio volume control (pavucontrol)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease 
-#start wifi manager
-exec --no-startup-id "dbus-launch --exit-with-session nm-tray"
-
-#start compton (as daemon)
-exec --no-startup-id "compton -b"
 
 #replace this line when needed
-bindsym $mod+Return exec --no-startup-id xterm 
-
+bindsym $mod+Return exec --no-startup-id rxvt
 
 #Rofi launch rofi
 #--run-list-command 
 #update cache first, and then run rofi
 bindsym $mod+d exec --no-startup-id "bash ~/.dotfiles/scripts/rofidruncacher.sh && rofi -show drun" 
 
-#launch udiskie for auto mounting devices
-exec --no-startup-id "udiskie &"
-
-#Monitor load screen layout
-exec --no-startup-id "bash $HOME/.screenlayout/autostart.sh"
-
-#Tint2 launch tint2
-exec --no-startup-id "tint2 &"
-
-
-#startup window apps
-#launch todo on boot
-exec --no-startup-id "xterm -e vim ~/memo/todo"
-
-#set wallpaper by restoring nitrogen
-exec --no-startup-id "nitrogen --restore"
-
-
-
+#start the startup file
+exec --no-startup-id "bash $HOME/.startup.sh"
 
 

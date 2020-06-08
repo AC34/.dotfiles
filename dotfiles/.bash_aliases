@@ -36,5 +36,10 @@ alias impress="libreoffice --impress"
 alias draw="libreoffice --draw"
 alias math="libreoffice --math"
 
+#git
+alias gaa="git add --all"
+alias gcam="git commit -am"
+alias gp="git push"
+
 
 

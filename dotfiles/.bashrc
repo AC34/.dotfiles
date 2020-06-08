@@ -21,10 +21,10 @@ PS1="[\u@\h \W]"
 . ~/.bash_aliases
 
 #laod bash completion
-BCPATH=$(whereis bash-completion)
-BCPATH=${BCPATH/bash-competion: /}
-if [ -f $BCPATH ]; then
-  $(BCPATH)
+if [ $(command -v bash-completion) ]; then
+  if [ -f $BCPATH ]; then
+    $(bash-completion)
+  fi
 fi
 
 #editing mode to vi
