@@ -8,8 +8,10 @@ function prepareVimPlug(){
 		read -p "(y/n)" yn
 		if [[ $yn = [yY] ]]; then
 			echo "installing vim-plug"
+			echo
       sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+			echo
 		fi
   else
     echo vim-plug is already installed

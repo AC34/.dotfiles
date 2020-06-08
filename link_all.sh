@@ -19,14 +19,12 @@ source $SCRIPTS/detectSessionType.sh
 source $SCRIPTS/prepareVimPlug.sh
 source $SCRIPTS/linkFiles.sh
 source $SCRIPTS/linkDirs.sh
+source $SCRIPTS/installNerdfont.sh
+
 
 #initializing variables
 DOT_HOME="$HOME/.dotfiles"
 MODE=$(detectSessionType)
-
-echo "dot home is $DOT_HOME"
-echo "scripts are at  $SCRIPTS"
-echo "gui mode is $MODE"
 
 #----------------------------------------------------
 #-------------------------------------common settings
@@ -53,8 +51,10 @@ fi
 if [ "$MODE" = "x11" ]; then
 	#common .desktop files
   linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "1"
+	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/x11/share/applications" ".dotfiles/local_alters/x11" ".local" "1"
+	echo
 
   #end the script
   echo linking files for x11 done
@@ -66,8 +66,10 @@ fi
 if [ "$MODE" = "wayland" ]; then
   #common .desktop files
   linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "1"
+	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/wayland/share/applications" ".dotfiles/local_alters/wayland" ".local" "1"
+	echo
   #end the script
   echo linking files for wayland done
 fi
@@ -77,13 +79,8 @@ fi
 prepareVimPlug
 
 #install mplus nerdfont
-echo install MPlus Nerdfont?
-read -p "(y/n)" yn
-if [[ $yn = [yY] ]]; then
-	echo installing vimplug
-  prepareVimPlug
-else
-	echo skipping nerdfont installation
-fi
+#this function contains dialog
+installNerdfont
 
+echo
 echo All dotfiles settings are done
