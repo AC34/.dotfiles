@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#Warning
+#Use linkFiles,linkDirs for linking
+#those will take restorable backups with .dot_bak attrbiutes for files/directories
+
+
 #----------------------------------------------------
 #-------------------------------------privilege check
 #----------------------------------------------------

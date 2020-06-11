@@ -45,6 +45,10 @@ function linkFiles(){
 		elif [ "$LINK_IN_DEBUG" = "0" ]; then
 			#actually linking
 			echo "linking file:$FILE to link:$LINK"
+			#take backup
+			if [ -f $LINK ]; then
+			  mv $LINK "$LINK.dot_bak"
+			fi
       ln -sfn $FILE $LINK
 		fi
   done

@@ -1,7 +1,0 @@
-loading D
-
-1) lsblk -> sdax
-2) dev/+sdax
-3= /dev/sdx /D ntfs-3g LABEL=d,nodev,nosuid,noatime,rw,async,auto 0 0
-to /etc/fstab 
-

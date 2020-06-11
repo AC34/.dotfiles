@@ -33,11 +33,6 @@ function linkDirs(){
       LINK=${FILE//$REPLACE_TARGET/$REPLACER}
 		fi
 
-    #making sure directory exists
-    if [ ! -d $(dirname $LINK) ]; then
-      mkdir -p $(dirname $LINK)
-    fi
-
 		#linking actually
 		if [ "$LINK_IN_DEBUG" = "1" ]; then
 			#debug
@@ -45,6 +40,10 @@ function linkDirs(){
 		elif [ "$LINK_IN_DEBUG" = "0" ]; then
 			#actually linking
 			echo "linking file:$FILE to link:$LINK"
+			#take a backup if the file exists
+		        if [ -d $LINK ]; then
+			  mv $LINK "$LINK.dot_bak"
+			fi
       ln -sfn $FILE $LINK
 		fi
   done
