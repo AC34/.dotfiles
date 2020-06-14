@@ -23,7 +23,10 @@ function linkFiles(){
 	fi
 
   #listing files in dir
-  FILES=($(find "$FILES_DIR" -maxdepth 1 -mindepth 1 -type f -name "*"))
+  OIFS=$IFS
+  IFS=$'\n'
+  FILES=($(find "$FILES_DIR" -maxdepth 1 -mindepth 1 -type f -name "*" -print))
+  IFS=$OIFS
 
   #create link names and link
   for FILE in "${FILES[@]}" ; do
@@ -32,11 +35,6 @@ function linkFiles(){
 		else
       LINK=${FILE//$REPLACE_TARGET/$REPLACER}
 		fi
-
-    #making sure directory exists
-    if [ ! -d $(dirname $LINK) ]; then
-      mkdir -p $(dirname $LINK)
-    fi
 
 		#linking actually
 		if [ "$LINK_IN_DEBUG" = "1" ]; then
@@ -49,7 +47,7 @@ function linkFiles(){
 			if [ -f $LINK ]; then
 			  mv $LINK "$LINK.dot_bak"
 			fi
-      ln -sfn $FILE $LINK
+      ln -sfn "$FILE" "$LINK"
 		fi
   done
 }

@@ -1,16 +1,26 @@
 #!/usr/bin/env bash
 
+#installs on the .dotfiles directory(not the actual .config~ dir)
 
 function prepareVimPlug(){
-  if [ ! -f $HOME/.local/share/nvim/site/autoload/plug.vim ]; then
+  if [ -z "$1" ];then
+	  echo "prepareVimPlug: argument 1 missing"
+	  exit
+  fi
+  DOT_HOME=$1
+  PLUG_DIR="$DOT_HOME/config/nvim/autoload"
+  echo "preparvimplug dothomoe:$DOT_HOME"
+  if [ ! -f "$PLUG_DIR/plug.vim" ]; then
 	  #ask for installation
     echo "Install vim-plug?"
 		read -p "(y/n)" yn
 		if [[ $yn = [yY] ]]; then
 			echo "installing vim-plug"
 			echo
-      sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+			if [ ! -d "$PLUG_DIR" ]; then
+		 		mkdir -p "$PLUG_DIR"
+			fi
+      curl -fLo "${PLUG_DIR}/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 			echo
 		fi
   else

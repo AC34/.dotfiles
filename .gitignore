@@ -9,13 +9,7 @@
 memo
 #ignore nvim plugs
 config/nvim/plugged/**
+config/nvim/autoload/**
 
 
 #allow config files
-!config/i3/*
-!config/nitrogen/*
-!config/nvim/*
-!config/ranger/*
-!config/rofi/*
-!config/sway/*
-!config/waybar/*

@@ -23,7 +23,10 @@ function linkDirs(){
 	fi
 
   #listing files in dir
-  FILES=($(find "$FILES_DIR" -maxdepth 1 -mindepth 1 -type d -name "*"))
+  OIFS=$IFS
+  IFS=$'\n'
+  FILES=($(find "$FILES_DIR" -maxdepth 1 -mindepth 1 -type d -name "*" -print))
+  IFS=$OIFS
 
   #create link names and link
   for FILE in "${FILES[@]}" ; do
@@ -44,7 +47,7 @@ function linkDirs(){
 		        if [ -d $LINK ]; then
 			  mv $LINK "$LINK.dot_bak"
 			fi
-      ln -sfn $FILE $LINK
+      ln -sfn "$FILE" "$LINK"
 		fi
   done
 }

@@ -1,5 +1,5 @@
 "vim-plug
-call plug#begin()
+call plug#begin("~/.config/nvim/autoload/plug.vim")
 
 
 "----------------ui presetnation--------------------------------

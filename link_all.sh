@@ -4,7 +4,6 @@
 #Use linkFiles,linkDirs for linking
 #those will take restorable backups with .dot_bak attrbiutes for files/directories
 
-
 #----------------------------------------------------
 #-------------------------------------privilege check
 #----------------------------------------------------
@@ -19,22 +18,19 @@ fi
 #----------------------------------------preparations
 #----------------------------------------------------
 #sourcing scripts
-SCRIPTS="$HOME/.dotfiles/scripts/link_utils"
+SCRIPTS="$(cd $(dirname $0); pwd)/scripts/link_utils"
 source $SCRIPTS/detectSessionType.sh
 source $SCRIPTS/prepareVimPlug.sh
 source $SCRIPTS/linkFiles.sh
 source $SCRIPTS/linkDirs.sh
-source $SCRIPTS/installNerdfont.sh
-
 
 #initializing variables
-DOT_HOME="$HOME/.dotfiles"
+DOT_HOME=$(cd $(dirname $0); pwd)
 MODE=$(detectSessionType)
 
 #----------------------------------------------------
 #-------------------------------------common settings
 #----------------------------------------------------
-
 #linking common files(dotfiles)
 linkFiles "$DOT_HOME/dotfiles" ".dotfiles/dotfiles/" "" "0"
 echo
@@ -55,12 +51,11 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "x11" ]; then
 	#common .desktop files
-  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "0"
+  linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/x11/share/applications" ".dotfiles/local_alters/x11" ".local" "0"
 	echo
-
   #end the script
   echo linking files for x11 done
 fi
@@ -70,7 +65,7 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "wayland" ]; then
   #common .desktop files
-  linkFiles $DOT_HOME/local/share/applications ".dotfiles/local" ".local" "0"
+  linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/wayland/share/applications" ".dotfiles/local_alters/wayland" ".local" "0"
@@ -81,11 +76,23 @@ fi
 
 #intall vim-plug 
 #this function contains dialog
-prepareVimPlug
+prepareVimPlug $DOT_HOME
 
-#install mplus nerdfont
-#this function contains dialog
-installNerdfont
+#install fonts
+echo "intall fonts?"
+#check for fonts existance
+read -p "(y/n)" yn
+if [[ $yn = [yY] ]]; then
+  #download and instal fonts in .dotfiles 
+  pushd "$DOT_HOME/local/share/"
+    git clone https://github.com/AC34/fonts.git
+  popd 
+  #link those files of .dotifles dir to ./local/share/fonts
+  #this way, deleting can be done because those link are able to be found
+  echo "fonts dir:$DOT_HOME/local/share/fonts"
+  linkFiles "$DOT_HOME/local/share/fonts" ".dotfiles/local/share" ".local/share" "0"
+fi
 
 echo
 echo All dotfiles settings are done
+
