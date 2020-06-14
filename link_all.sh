@@ -91,6 +91,8 @@ if [[ $yn = [yY] ]]; then
   #this way, deleting can be done because those link are able to be found
   echo "fonts dir:$DOT_HOME/local/share/fonts"
   linkFiles "$DOT_HOME/local/share/fonts" ".dotfiles/local/share" ".local/share" "0"
+  #update fonts cache
+  fc-cache -f
 fi
 
 echo
