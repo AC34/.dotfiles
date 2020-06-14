@@ -10,6 +10,11 @@ memo
 #ignore nvim plugs
 config/nvim/plugged/**
 config/nvim/autoload/**
+local/share/nvim/swap/**
+local/share/nvim/shada/***
+local/share/nvim/site/autoload/**
 
+#fonts
+local/share/fonts
 
 #allow config files

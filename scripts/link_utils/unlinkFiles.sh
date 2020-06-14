@@ -4,7 +4,7 @@
 #arg 2: replace target pattern (of the actual files directory)
 #arg 3: replacer pattern (of the link names directory)
 #arg 4: debug "1" will not actually link "0" will link
-function linkFiles(){
+function unlinkFiles(){
 	#initialize arguments
   FILES_DIR=$1
 	REPLACE_TARGET=$2
@@ -39,17 +39,17 @@ function linkFiles(){
 		#linking actually
 		if [ "$LINK_IN_DEBUG" = "1" ]; then
 			#debug
-			echo "(debug)linking file:$FILE to link:$LINK"
+			echo "(debug)unlinking link:$LINK"
 		elif [ "$LINK_IN_DEBUG" = "0" ]; then
-			#actually linking
-			echo "linking file:$FILE to link:$LINK"
-			#take backup
-			if [ -f "$LINK" ]; then
-			  mv "$LINK" "${LINK}.dot_bak" -fT
+			#actually unlinking
+			echo "unlinking link:$LINK"
+			if [ -L "$LINK" ]; then
+      	unlink "$LINK"
 			fi
-			#make directory
-			mkdir $(dirname "$LINK") --parents
-      ln -sfn "$FILE" "$LINK"
+      #restore backup(only if exists)
+			if [ -f "${LINK}.dot_bak" ]; then
+			  mv "${LINK}.dot_bak" "$LINK"
+			fi
 		fi
   done
 }

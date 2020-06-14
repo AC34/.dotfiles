@@ -31,12 +31,28 @@ MODE=$(detectSessionType)
 #----------------------------------------------------
 #-------------------------------------common settings
 #----------------------------------------------------
+#install fonts to .dotfiles(late will be linked)
+echo "intall fonts?"
+#check for fonts existance
+read -p "(y/n)" yn
+if [[ $yn = [yY] ]]; then
+  #download and instal fonts in .dotfiles 
+  pushd "$DOT_HOME/local/share/"
+    git clone https://github.com/AC34/fonts.git
+  popd 
+  #link those files of .dotifles dir to ./local/share/fonts
+  #this way, deleting can be done because those link are able to be found
+  echo "fonts dir:$DOT_HOME/local/share/fonts"
+fi
 #linking common files(dotfiles)
 linkFiles "$DOT_HOME/dotfiles" ".dotfiles/dotfiles/" "" "0"
 echo
 #common .config files
-linkDirs $DOT_HOME/config .dotfiles/config .config "0"
+linkDirs "$DOT_HOME/config" ".dotfiles/config" ".config" "0"
 echo
+#.local/share directories
+linkDirs "$DOT_HOME/local/share" ".dotfiles/local" ".local" "0"
+
 
 #----------------------------------------------------
 #-----------------------------no gui setting (server)
@@ -51,7 +67,7 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "x11" ]; then
 	#common .desktop files
-  linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
+  #linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/x11/share/applications" ".dotfiles/local_alters/x11" ".local" "0"
@@ -65,7 +81,7 @@ fi
 #----------------------------------------------------
 if [ "$MODE" = "wayland" ]; then
   #common .desktop files
-  linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
+  #linkFiles "$DOT_HOME/local/share/applications" ".dotfiles/local" ".local" "0"
 	echo
 	#x11 based files
   linkFiles "$DOT_HOME/local_alters/wayland/share/applications" ".dotfiles/local_alters/wayland" ".local" "0"
@@ -78,22 +94,8 @@ fi
 #this function contains dialog
 prepareVimPlug $DOT_HOME
 
-#install fonts
-echo "intall fonts?"
-#check for fonts existance
-read -p "(y/n)" yn
-if [[ $yn = [yY] ]]; then
-  #download and instal fonts in .dotfiles 
-  pushd "$DOT_HOME/local/share/"
-    git clone https://github.com/AC34/fonts.git
-  popd 
-  #link those files of .dotifles dir to ./local/share/fonts
-  #this way, deleting can be done because those link are able to be found
-  echo "fonts dir:$DOT_HOME/local/share/fonts"
-  linkFiles "$DOT_HOME/local/share/fonts" ".dotfiles/local/share" ".local/share" "0"
-  #update fonts cache
-  fc-cache -f
-fi
+#update fonts cache
+fc-cache -f
 
 echo
 echo All dotfiles settings are done

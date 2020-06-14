@@ -28,7 +28,6 @@ filetype plugin on
 "allow plugin indent
 filetype plugin indent on
 
-
 "load keymap settings
 source $HOME/.config/nvim/keymaps.vim
 

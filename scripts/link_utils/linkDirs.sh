@@ -49,7 +49,7 @@ function linkDirs(){
 			fi
 			#make directory
 			mkdir $(dirname "$LINK") --parents
-      ln -s "$FILE" "$LINK"
+      ln -sfn "$FILE" "$LINK"
 		fi
   done
 }

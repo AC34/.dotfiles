@@ -149,9 +149,9 @@ hide_edge_borders both
 #screen brightness for first display found to be conected
 #see ~/.dotfiles/scripts/backlight_up(down).sh for min and max values of brightness
 #brigher
-bindsym XF86MonBrightnessUp exec "bash ~/.dotfiles/scripts/backlight_up.sh"
+bindsym XF86MonBrightnessUp exec "bash ~/.dotfiles/scripts/utility/backlight_up.sh"
 #darker
-bindsym XF86MonBrightnessDown exec "bash ~/.dotfiles/scripts/backlight_down.sh"
+bindsym XF86MonBrightnessDown exec "bash ~/.dotfiles/scripts/utility/backlight_down.sh"
 
 #pulseaudio volume control (pavucontrol)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase
@@ -163,7 +163,7 @@ bindsym $mod+Return exec --no-startup-id rxvt
 #Rofi launch rofi
 #--run-list-command 
 #update cache first, and then run rofi
-bindsym $mod+d exec --no-startup-id "bash ~/.dotfiles/scripts/rofidruncacher.sh && rofi -show drun" 
+bindsym $mod+d exec --no-startup-id "bash ~/.dotfiles/scripts/utility/rofidruncacher.sh && rofi -show drun" 
 
 #start the startup file
 exec --no-startup-id "bash $HOME/.startup.sh"

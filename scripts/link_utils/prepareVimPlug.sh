@@ -8,8 +8,9 @@ function prepareVimPlug(){
 	  exit
   fi
   DOT_HOME=$1
-  PLUG_DIR="$DOT_HOME/config/nvim/autoload"
-  echo "preparvimplug dothomoe:$DOT_HOME"
+  PLUG_DIR="$DOT_HOME/local/share/nvim/site/autoload"
+  mkdir $PLUG_DIR --parents
+  echo "preparvimplug dothome:$DOT_HOME"
   if [ ! -f "$PLUG_DIR/plug.vim" ]; then
 	  #ask for installation
     echo "Install vim-plug?"

@@ -22,22 +22,30 @@ alias ls='ls -a'
 alias ll='ls -la'
 
 #firefox
-if [ "$XDG_SESSION_TYPE" = "x11"]; then
-  alias f="firefox"
-  alias fp="firefox -private-window"
-else if [ "$XDG_SESSION_TYPE" = "wayland"]; then
-  if [ $(command -v firefox-wayland) != "" ]; then
-    alias f="firefox-wayland"
-    alias fp="firefox-wayland -private-window"
-  else
-    alias f="firefox"
-    alias fp="firefox -private-window"
-  fi
-fi
+#if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+#  alias f="firefox"
+#  alias fp="firefox -private-window"
+#else if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+#  if [ "$(command -v firefox-wayland)" != "" ]; then
+#    alias f="firefox-wayland"
+#    alias fp="firefox-wayland -private-window"
+#  else
+#    alias f="firefox"
+#    alias fp="firefox -private-window"
+#  fi
+#fi
 
 #chrome
-alias c="google-chrome"
-alias ci="google-chrome -incognito"
+if [ "$(command -v google-chrome)" != "" ]; then
+  alias gc="google-chrome"
+  alias gci="google-chrome -incognito"
+fi
+
+#chromium
+if [ "$(command -v chromium)" != "" ]; then
+  alias c=chromium
+  alias ci=chromium -incoognito
+fi
 
 #libre-office
 alias calc="libreoffice --calc"
@@ -50,6 +58,5 @@ alias math="libreoffice --math"
 alias gaa="git add --all"
 alias gcam="git commit -am"
 alias gp="git push"
-
 
 
