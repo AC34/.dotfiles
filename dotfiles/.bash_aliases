@@ -22,8 +22,18 @@ alias ls='ls -a'
 alias ll='ls -la'
 
 #firefox
-alias f="firefox-wayland"
-alias fp="firefox-wayland -private-window"
+if [ "$XDG_SESSION_TYPE" = "x11"]; then
+  alias f="firefox"
+  alias fp="firefox -private-window"
+else if [ "$XDG_SESSION_TYPE" = "wayland"]; then
+  if [ $(command -v firefox-wayland) != "" ]; then
+    alias f="firefox-wayland"
+    alias fp="firefox-wayland -private-window"
+  else
+    alias f="firefox"
+    alias fp="firefox -private-window"
+  fi
+fi
 
 #chrome
 alias c="google-chrome"
