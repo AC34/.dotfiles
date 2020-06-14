@@ -44,10 +44,12 @@ function linkDirs(){
 			#actually linking
 			echo "linking file:$FILE to link:$LINK"
 			#take a backup if the file exists
-		        if [ -d $LINK ]; then
-			  mv $LINK "$LINK.dot_bak"
+		        if [ -d "$LINK" ]; then
+			  mv -fT "$LINK" "${LINK}.dot_bak"
 			fi
-      ln -sfn "$FILE" "$LINK"
+			#make directory
+			mkdir $(dirname "$LINK") --parents
+      ln -s "$FILE" "$LINK"
 		fi
   done
 }

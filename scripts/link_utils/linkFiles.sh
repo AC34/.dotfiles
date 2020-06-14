@@ -44,10 +44,12 @@ function linkFiles(){
 			#actually linking
 			echo "linking file:$FILE to link:$LINK"
 			#take backup
-			if [ -f $LINK ]; then
-			  mv $LINK "$LINK.dot_bak"
+			if [ -f "$LINK" ]; then
+			  mv "$LINK" "${LINK}.dot_bak" -fT
 			fi
-      ln -sfn "$FILE" "$LINK"
+			#make directory
+			mkdir $(dirname "$LINK") --parents
+      ln -s "$FILE" "$LINK"
 		fi
   done
 }
