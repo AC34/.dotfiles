@@ -1,12 +1,12 @@
 
-!To delete current settings, run xrdb -remove 
+!To delete current settings, run xrdb -remove
 !To check if terminal supports 256 colors. tput colors
 
 
 !clipoard shortcuts
 XTerm*VT100.Translations: #override \
                  Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)                                                                   
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 !clipboard functions
 XTerm*selectToClipboard: true
 !misc
@@ -19,18 +19,20 @@ XTerm*renderFont:true
 XTerm*faceName:M+ 1m:style=regular
 XTerm*faceDoublesizeName: M+ 1m Nerd Font Complete.ttf: M+ 1m,mplus Nerd Font:style=regular
 
-XTerm*letterSpace:0 
-XTerm*faceSize: 14
+XTerm*letterSpace:0
+XTerm*faceSize: 20
 XTerm*xftAntialias:true
 XTerm*xftHinting:true
 
 Xft.dpi:96
+Xft.autohint: 0
 Xft.antialias:true
 Xft.rgba:rgb
 Xft.hinting:true
 Xft.hintstyle:hintsmedium
+Xft.lcdfilter: lcddefault
 
-!ThemeColor 
+!ThemeColor
 !https://github.com/chriskempson/tomorrow-theme/blob/master/Xdefaults/XresourceTomorrowNight
 !TomorrowNight
 !#define t_background        #1d1f21
@@ -47,7 +49,6 @@ Xft.hintstyle:hintsmedium
 #define t_aqua	        	#8abeb7
 #define t_blue	        	#81a2be
 #define t_purple        	#b294bb
-
 
 XTerm*.foreground:   t_foreground
 XTerm*.background:   t_background
@@ -81,7 +82,7 @@ XTerm*.color15: t_current_line
 !clipoard shortcuts
 URxvt*VT100.Translations: #override \
 		 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
-		 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)                                                                   
+		 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 
 !rxvt clipboard functions
 URxvt*selectToClipboard: true
@@ -94,13 +95,9 @@ URxvt*cursorBlink:true
 URxvt*scrollBar: false
 
 !fonts
-URxvt.font: xft:M+ 1m,mplus Nerd Font:size_14:antialias=true
-URxvt.boldFont: xft:M+ 1m,mplus Nerd Font:size_14:antialias=true
+URxvt*.font:xft:M+ 1m:style=regular:antialias=true:size=20
+URxvt*.boldFont:xft:M+ 1m:antialias=true:size=20
 
-URxvt*letterSpace:0 
-!URxvt*faceSize: 14
-URxvt*xftAntialias:true
-URxvt*xftHinting:true
 ! rxvt-unicode settings
 URxvt*.foreground:   t_foreground
 URxvt*.background:   t_background
@@ -131,7 +128,7 @@ URxvt*.color7:       t_selection
 URxvt*.color15: t_current_line
 
 
-!URxvt.perl-ext-common: wl-clipboard 
+!URxvt.perl-ext-common: wl-clipboard
 !URvxt.copyCommand: xclip -i -selection clipboard
 !URvxt.pasteCommand: xclip -o -selection clipboard
 !URxvt.keysym.M-c:perl:clipboard:copy
@@ -147,8 +144,4 @@ URxvt.preeditType:OverTheSpot
 !transparency
 URxvt.depth:32
 URxvt.foreground: #eeeeee
-URxvt.background: [85]#010101
-
-
-
-
+URxvt.background: [65]#010101

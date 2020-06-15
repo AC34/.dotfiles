@@ -1,4 +1,3 @@
-
 #no duplicated gistory
 HISTCONTROL=ignoreboth
 #setting history length
@@ -37,7 +36,7 @@ xset r rate 200 60
 #powerline
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-if [ -f 'which powerline-daemon' ]; then
+if [ "$(command -v powerline-daemon)" != "" ]; then
   powerline-daemon -q
   . /usr/share/powerline/bash/powerline.sh
 fi
@@ -45,6 +44,3 @@ fi
 #ranger variables
 export VISUAL=nvim
 export EDITOR=nvim
-
-
-

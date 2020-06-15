@@ -143,8 +143,8 @@ for_window [class="^.*"] border pixel 1
 client.focused #000000  #030009  #0E0A14 #0E0A14
 
 #Border
-default_border none 
-hide_edge_borders both 
+default_border none
+hide_edge_borders both
 
 #screen brightness for first display found to be conected
 #see ~/.dotfiles/scripts/backlight_up(down).sh for min and max values of brightness
@@ -155,17 +155,14 @@ bindsym XF86MonBrightnessDown exec "bash ~/.dotfiles/scripts/utility/backlight_d
 
 #pulseaudio volume control (pavucontrol)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease
 
 #replace this line when needed
 bindsym $mod+Return exec --no-startup-id rxvt
 
 #Rofi launch rofi
-#--run-list-command 
+#--run-list-command
 #update cache first, and then run rofi
-bindsym $mod+d exec --no-startup-id "bash ~/.dotfiles/scripts/utility/rofidruncacher.sh && rofi -show drun" 
+bindsym $mod+d exec --no-startup-id "bash ~/.dotfiles/scripts/utility/rofidruncacher.sh && rofi -show drun"
 
-#start the startup file
-exec --no-startup-id "bash $HOME/.startup.sh"
-
-
+exec --no-startup-id "bash ~/.startup.sh &"
