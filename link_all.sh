@@ -29,6 +29,11 @@ DOT_HOME=$(cd $(dirname $0); pwd)
 MODE=$(detectSessionType)
 
 #----------------------------------------------------
+#------------------------check if links already exist
+#----------------------------------------------------
+
+
+#----------------------------------------------------
 #-------------------------------------common settings
 #----------------------------------------------------
 #install fonts to .dotfiles(late will be linked)
@@ -36,10 +41,10 @@ echo "intall fonts?"
 #check for fonts existance
 read -p "(y/n)" yn
 if [[ $yn = [yY] ]]; then
-  #download and instal fonts in .dotfiles 
+  #download and instal fonts in .dotfiles
   pushd "$DOT_HOME/local/share/"
     git clone https://github.com/AC34/fonts.git
-  popd 
+  popd
   #link those files of .dotifles dir to ./local/share/fonts
   #this way, deleting can be done because those link are able to be found
   echo "fonts dir:$DOT_HOME/local/share/fonts"
@@ -90,7 +95,7 @@ if [ "$MODE" = "wayland" ]; then
   echo linking files for wayland done
 fi
 
-#intall vim-plug 
+#intall vim-plug
 #this function contains dialog
 prepareVimPlug $DOT_HOME
 
@@ -99,4 +104,3 @@ fc-cache -f
 
 echo
 echo All dotfiles settings are done
-

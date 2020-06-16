@@ -2,6 +2,7 @@
 
 #11 settings
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
+
   #compositor
   if [ "$(command -v picom)" != "" ]; then
   	#picom first
@@ -25,4 +26,7 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
   if [ "$(command -v ibus-daemon)" != "" ]; then
 	  ibus-daemon -dx &
 	fi
+	#open todo view
+  bash ~/.todo.sh &
+
 fi #x11
