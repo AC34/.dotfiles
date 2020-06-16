@@ -3,7 +3,7 @@
 #dpkg(debian)
 if [ "$(uname -a)" == *"Debian"* ]; then
 	 echo "Installation for debian"
-	 PACKAGES="php nodejs npm docker docker-compose"
+	 PACKAGES="php nodejs npm docker docker-compose kchmviewer"
    echo "intall dev packeages?[$PACKAGES]"
 	 read -p "(y/n)" yn
 	 if [[ $yn = [yY] ]]; then
@@ -17,7 +17,7 @@ fi
 #rpm(fedora v>=32)
 if [ -f "/etc/fedora-release" ]; then
 	 echo "Installation for fedora"
-	 PACKAGES="php nodejs npm docker docker-compose"
+	 PACKAGES="php nodejs npm docker docker-compose kchmviewer"
    echo "intall dev packeages?[$PACKAGES]"
 	 read -p "(y/n)" yn
 	 if [[ $yn = [yY] ]]; then
