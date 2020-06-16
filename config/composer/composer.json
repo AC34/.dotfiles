@@ -1,0 +1,6 @@
+{
+    "require": {
+        "squizlabs/php_codesniffer": "*",
+        "hirak/prestissimo": "^0.3.10"
+    }
+}

@@ -27,3 +27,10 @@ if [ -f "/etc/fedora-release" ]; then
 fi
 
 #rpm(centos)
+
+#update composer
+echo "Run composer update now?"
+read -p "(y/n)" yn
+if [[ $yn = [yY] ]]; then
+  composer update
+fi
