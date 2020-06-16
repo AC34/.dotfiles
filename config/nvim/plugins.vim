@@ -18,6 +18,9 @@ Plug 'scrooloose/nerdtree'
 "nerd tree git status highlight as it says
 Plug 'scrooloose/nerdtree-git-plugin'
 
+"colors in source code
+Plug 'chrisbra/colorizer'
+
 "----------------genral--------------------------------
 " vim-scaffold
 Plug 'AC34/Vim-scaffold'
@@ -82,7 +85,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled=1
 "show tab number
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme="deus"
+let g:airline_theme="bubblegum"
 
 "use airline symbols
 if !exists("g:airline_symbols")

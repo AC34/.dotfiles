@@ -16,8 +16,10 @@ if [ "$XDG_SESSION_TYPE" = "x11" ]; then
     feh --bg-fill ~/.wallpaper.png &
   fi
 
-  #polybar
-
+  #tint2
+  if [ "$(command -v tint2)" != "" ]; then
+    tint2 &
+	fi
 
 	#ibus input
   if [ "$(command -v ibus-daemon)" != "" ]; then
