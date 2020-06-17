@@ -40,14 +40,13 @@ Plug 'tpope/vim-fugitive'
 "----------------languages--------------------------------
 "
 "----------------lnaguages general
-" emmet
-Plug 'mattn/emmet-vim'
 " multiple languages syntax
 Plug 'sheerun/vim-polyglot'
 " tagbar alternative
 Plug 'liuchengxu/vista.vim'
 "auto commpletion
 Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 
 "Asynchronous Lint Engine
 "php requires composer(globally installed PHPMD,PHPCS,PHPSTAN)
@@ -60,12 +59,14 @@ Plug 'demophoon/bash-fold-expr'
 "----------------markdown
 "----------------dockerfile
 "----------------html
+" emmet
+Plug 'mattn/emmet-vim'
 "----------------css
 "----------------php
 "updated syntax file
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 "completion candidates
-Plug 'phpactor/phpactor', { 'do': ':call phpactor#Update()', 'for': 'php'}
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 "to work with ncm2
 Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 "php coding standard fixer
@@ -77,6 +78,8 @@ call plug#end()
 
 
 "----------------plugin-settings--------------------------------
+"highlighting color codes in all files
+autocmd BufEnter * :ColorHighlight<CR>
 "color theme
 colorscheme falcon "air-line use powerline fonts"
 
@@ -140,3 +143,11 @@ let g:ale_sign_warning = '.'
 let g:ale_lint_on_insert_leave = 0
 "phpactor executable path
 let g:phpactor_executable = '~/.config/nvim/plugged/phpactor/bin/phpactor'
+
+"ncm2
+ " enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+autocmd FileType php setlocal omnifunc=phpactor#Complete

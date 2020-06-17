@@ -39,7 +39,6 @@ source $HOME/.config/nvim/plugins.vim
 
 
 "----------------file enter settings--------------------------------
-autocmd BufEnter * :ColorHighlight<CR>
 
 "----------------neovim related settings--------------------------------
 "----------------gvim related settings--------------------------------
