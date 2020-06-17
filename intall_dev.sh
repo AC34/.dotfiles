@@ -34,3 +34,11 @@ read -p "(y/n)" yn
 if [[ $yn = [yY] ]]; then
   composer update
 fi
+
+#npm
+echo "install intelephense?"
+
+read -p "(y/n)" yn
+if [[ $yn = [yY] ]]; then
+  sudo npm install -g intelephense
+fi

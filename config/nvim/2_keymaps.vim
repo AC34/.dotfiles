@@ -1,5 +1,17 @@
-"kemap settings only
-
+"
+"
+"
+"
+"
+"           keymap settings only
+"
+"
+"
+"
+"
+"
+"
+"------------------------------------------------------
 "esct to fd
 imap fd <Esc>
 "disable space from any binding

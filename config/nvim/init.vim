@@ -1,47 +1,35 @@
-"Neovim setup (not gvim)
-"Commenting
-"preferrably all in lowercase (for quick searches)
-
-"----------------ui presentation--------------------------------
-"font
-set guifont="Powerline\ 15"
-
-"scroll by c-u,c-d
-set scroll=7
-set scrolloff=9999
-"search highlight
-augroup searchHighlight
-  au BufEnter * execute "hi search ctermfg=179 ctermbg=NONE"
-				     \| execute "hi Folded ctermfg=179 ctermbg=Black"
-augroup END
-
-"preventing window size changes for side panes
-"doesnt shrink side windows(vista,nerdtree)
-"shrinks the main page instead
-set noequalalways
-
-"----------------background--------------------------------
-"filetype detection
-filetype on
-filetype plugin on
-
-"allow plugin indent
-filetype plugin indent on
+"
+"
+"
+"
+"
+"           config sourcing settings only
+"
+"
+"
+"
+"
+"
+"
+"------------------------------------------------------
+"overall general settings
+source $HOME/.config/nvim/1_settings.vim
 
 "load keymap settings
-source $HOME/.config/nvim/keymaps.vim
-
-"load plugin keymap
-source $HOME/.config/nvim/plugin_keymaps.vim
+source $HOME/.config/nvim/2_keymaps.vim
 
 "load plugin settings
-source $HOME/.config/nvim/plugins.vim
+source $HOME/.config/nvim/3_plugins.vim
 
+"load plugin settings
+source $HOME/.config/nvim/4_plugin_settings.vim
 
-"----------------file enter settings--------------------------------
+"load plugin keymap
+source $HOME/.config/nvim/5_plugin_keymaps.vim
 
-"----------------neovim related settings--------------------------------
-"----------------gvim related settings--------------------------------
-"----------------windows related settings--------------------------------
-"
-"
+"load autocmds non-plugin
+source $HOME/.config/nvim/6_autocmds.vim
+
+"load autocmds for plugins
+source $HOME/.config/nvim/7_plugin_autocmds.vim
+

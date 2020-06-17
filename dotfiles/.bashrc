@@ -44,3 +44,6 @@ fi
 #ranger variables
 export VISUAL=nvim
 export EDITOR=nvim
+
+#composer
+COMPOSER_HOME=~/.config/composer/
