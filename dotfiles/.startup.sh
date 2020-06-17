@@ -3,6 +3,11 @@
 #11 settings
 if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 
+	#launch arandr on
+	if [ "$(xrandr | grep -c " connected ")" -gt 1 ]; then
+		arandr
+	fi
+
   #compositor
   if [ "$(command -v picom)" != "" ]; then
   	#picom first
